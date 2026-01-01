@@ -1,0 +1,949 @@
+{
+  "id": "act01_chapter01_adv02",
+  "type": "traditional",
+  "lines": [
+    {
+      "type": "label",
+      "name": "Scene1-0-2"
+    },
+    {
+      "type": "text",
+      "text": "——不对！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_001 Wake up.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_490_001.png",
+        "subId": "Middle",
+        "posX": 80,
+        "posY": -35,
+        "scale": 3,
+        "rotZ": -10
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Stills-Middle",
+        "props": {
+          "posX": 60,
+          "posY": -20
+        },
+        "easing": "EaseOutBack",
+        "duration": 0.4
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 1.2
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.2
+      }
+    },
+    {
+      "type": "text",
+      "text": "樱羽艾玛大喊着，爬起身来。"
+    },
+    {
+      "type": "text",
+      "text": "大概是因为做了噩梦，她的呼吸相当紊乱，\n而且满身都是汗水。"
+    },
+    {
+      "type": "text",
+      "text": "原来是做梦。她才刚安下心来——\n眼前的光景就逐渐清晰了起来。"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_21_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "咦，怎么回事，这里是……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_490_001.png",
+        "posX": 50,
+        "posY": 50,
+        "rotZ": 0,
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "Stills-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.8
+      }
+    },
+    {
+      "type": "text",
+      "text": "醒来的艾玛发现，这里不是她自己的房间。\n这是张做工粗糙的双层床，她睡在了这里的下铺。"
+    },
+    {
+      "type": "text",
+      "text": "床紧贴着老旧的石墙，\n而石墙似乎透着一股寒气，总令人不禁为之一颤。"
+    },
+    {
+      "type": "text",
+      "text": "室内光线昏暗，空气也并不畅通。\n并且——有一道铁栅栏限制了自由。"
+    },
+    {
+      "type": "text",
+      "text": "牢、牢房……！？为什么！？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛陷入了恐慌，\n拼命回想着睡前的记忆。"
+    },
+    {
+      "type": "text",
+      "text": "（昨天是想到明天我就要上高中了……\n 很开心地睡着了才对）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "昨天是春假的最后一天。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛早早地洗了澡，换了睡衣，\n早早地钻进了被窝里。"
+    },
+    {
+      "type": "text",
+      "text": "（记得睡觉前……我还看着挂在墙上的\n 全新的高中制服）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "望着那件明天就要穿上的制服，\n艾玛露出了十分幸福的笑容。"
+    },
+    {
+      "type": "text",
+      "text": "（还下了决心，一切要重头来过……）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "然后在温暖的被窝包裹下，闭上了双眼。"
+    },
+    {
+      "type": "text",
+      "text": "可是现在，她正被关在牢房里。\n身上还穿着自己从没见过的衣服。"
+    },
+    {
+      "type": "text",
+      "text": "（这是噩梦的后续……？）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "但，四周的一切却如此真实。"
+    },
+    {
+      "type": "text",
+      "text": "她大致观察了下室内。四周被结实的石墙包围，\n只有铁栅栏一面联通着过道。"
+    },
+    {
+      "type": "text",
+      "text": "墙上安装有电视屏幕。"
+    },
+    {
+      "type": "text",
+      "text": "在透着中世纪气息的古牢里面，\n这块现代随处可见的显示屏幕实在是格格不入。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_001_001.png"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "我说，这里究竟是什么地方！？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema008.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛抓着铁栅栏，喊出声来。"
+    },
+    {
+      "type": "text",
+      "text": "紧接着，远远地从其他地方传来了\n其他少女们的叫喊声。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "竟把本小姐关在这种地方！\n究竟是什么意思啊！？",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Unknown001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "监禁少女可是犯罪欸！虽然不知是谁，\n可干出来这种事，这辈子就到头了欸！？",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Unknown002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "喂，开什么玩笑，我要杀了你！放我出去！！",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Unknown003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Normal1",
+          "ArmR3"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "（……太好了，被关进来的\n 不止我一个人）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema009.ogg"
+    },
+    {
+      "type": "text",
+      "text": "现场忽然吵闹起来，\n艾玛的脸上露出了安心。紧接着——"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "——能不能给我安静一下？",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Unknown004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "从艾玛身后冷不防传来一道清冽的声音。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_001 Wake up.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "艾玛顺着声音望去，\n发现双层床的上铺有个刚起身的人。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "大吵大闹是不对的。",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Unknown005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "——！！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema010.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛十分吃惊，瞬间忘记了呼吸。\n因为，她认识这位说话的少女。"
+    },
+    {
+      "type": "text",
+      "text": "（真的假的……\n 是二阶堂希罗……？）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema011.ogg"
+    },
+    {
+      "type": "text",
+      "text": "二阶堂希罗——"
+    },
+    {
+      "type": "text",
+      "text": "是在艾玛的初中时代，令她深陷黑暗的同窗，\n也是广受众人仰慕，常在人群中心可爱地微笑着的少女……"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Surprised1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "和她对上眼的希罗，也大大的瞪圆了眼睛。\n艾玛还是第一次见有人把眼睛瞪得那么大。"
+    },
+    {
+      "type": "text",
+      "text": "为什么你会在这里？",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Hiro001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_178 Landing sound.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗轻快的爬下了床，向艾玛问道。"
+    },
+    {
+      "type": "text",
+      "text": "往日同窗竟出现在眼前，\n惊慌失措的艾玛哑口无言。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Surprised1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1",
+          "ArmR3"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "啊……",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema012.ogg"
+    },
+    {
+      "type": "text",
+      "text": "这是哪里？",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Hiro002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "希罗四下张望着，\n紧张地尖声问道。"
+    },
+    {
+      "type": "text",
+      "text": "我、我说，希罗……",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema013.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛鼓起勇气，\n尝试向往日旧识搭话。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "这时——"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_003 Monitor.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "声音从墙壁上的显示屏幕传来。\n艾玛和希罗吓了一跳，然后望向屏幕。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "printer",
+      "params": {
+        "type": "Normal",
+        "appearance": "stream"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_025_001.png",
+        "subId": "Middle",
+        "scale": 1.3
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Warden",
+        "variant": "1",
+        "subId": "Middle",
+        "scale": 1.4
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.3
+      }
+    },
+    {
+      "type": "text",
+      "text": "（欸，怎么回事！？猫、猫头鹰怪物……！？）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema014.ogg"
+    },
+    {
+      "type": "text",
+      "text": "啊……喂喂……看得见画面吗……？\n毕竟机器有好些年头了，故障特别多……唉呀呀。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Warden001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "大家好，我是典狱长。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Warden002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我想给大家作详细说明，\n请各位到会客厅来集合。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Warden003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我会给大家打开牢房的锁，\n之后请大家跟着带路的看守。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Warden004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "想反抗也没问题……\n只不过小命不保罢了……嗯……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Warden005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_003 Monitor.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "SolidColor",
+        "subId": "Overlay",
+        "duration": 0.5
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.8
+      }
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_004 Lock prison.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "printer",
+      "params": {
+        "type": "Normal",
+        "appearance": "default"
+      }
+    },
+    {
+      "type": "text",
+      "text": "显示屏幕再次回归一片漆黑。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle,Warden-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Surprised1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR3"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "duration": 0.5
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.3
+      }
+    },
+    {
+      "type": "text",
+      "text": "典狱长……？ 看守……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema015.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛似乎思考不太跟得上状况的变化，呆站在原地一动不动——\n而她身边的希罗也一样。紧接着——"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_005 Hikizuru oto.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "从铁栅栏的另一侧——过道处，\n传来了某样沉重物体的移动声，且愈来愈接近。"
+    },
+    {
+      "type": "text",
+      "text": "那声音透着一股令人汗毛直竖的感觉，\n令艾玛她们本能地察觉到了危险。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛和希罗绷紧了身子，\n——然后缓慢地将视线挪动到过道上。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_001_001.png",
+        "subId": "Middle",
+        "posX": 100,
+        "posY": 40,
+        "scale": 2,
+        "rotZ": 0,
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.2
+      }
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_001_002.png",
+        "posX": 100,
+        "posY": 40,
+        "scale": 2,
+        "rotZ": 0,
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "MainBackground",
+        "props": {
+          "posY": 45
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.8
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "MainBackground-Middle",
+        "props": {
+          "posY": 45
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.8
+      }
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.6
+      }
+    },
+    {
+      "type": "text",
+      "text": "噫……",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema016.ogg"
+    },
+    {
+      "type": "text",
+      "text": "差点惊声大喊的艾玛，用双手捂住了自己的嘴。"
+    },
+    {
+      "type": "text",
+      "text": "面前出现了披着破烂黑衣的不明物体。\n那东西大概有两三米高。"
+    },
+    {
+      "type": "text",
+      "text": "虽然戴着面具，看不见面孔，\n但从外形看，明显不是人类。"
+    },
+    {
+      "type": "text",
+      "text": "希、希罗……",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema017.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛在恐惧的驱使下，不禁抓紧了希罗的手臂。\n就连刚才还很冷静的希罗也望着过道上的异形，呆站着一动不动。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_001_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "rotZ": 0,
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_005 Hikizuru oto.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_23_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "呀啊啊啊！怪物别碰我！好恶心！\n好了，好了啦，我走就是！！",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Unknown006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛她们听见，其他牢房里\n有人被怪物强行带走了。"
+    },
+    {
+      "type": "text",
+      "text": "这让她们两个感到越来越害怕了。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_001_001.png",
+        "subId": "Default",
+        "posX": 50,
+        "posY": 50,
+        "rotZ": 0,
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Head1",
+          "Pale1-Off",
+          "Sweat1-Off",
+          "Cheeks1-Normal",
+          "Angle01/Head01/Facial01/Eyes01>Eyes01_Angry_Open",
+          "Angle01/Head01/Facial01/Mouth01>Mouth01_Fearful_Open"
+        ],
+        "position": 45
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1",
+          "ArmR1"
+        ],
+        "position": 60
+      }
+    },
+    {
+      "type": "text",
+      "text": "所谓的说明，会解释清楚情况吗。\n那我得快点过去……",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Hiro003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "希罗自言自语着，然后望向身旁的艾玛。"
+    },
+    {
+      "type": "text",
+      "text": "这时她终于发现，\n艾玛紧紧抓住了她的手臂。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_018 Reject shake hands.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Angry2"
+        ],
+        "position": 40
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1",
+          "ArmR3"
+        ],
+        "position": 80
+      }
+    },
+    {
+      "type": "text",
+      "text": "——唰。\n她用力地甩开了艾玛的手。"
+    },
+    {
+      "type": "text",
+      "text": "……！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Ema018.ogg"
+    },
+    {
+      "type": "text",
+      "text": "不要随便碰我。\n你可别忘了，我讨厌你。",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02/0101Adv02_Hiro004.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "Hiro"
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗的眼神中\n透着一股深深的厌弃。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1"
+        ],
+        "position": 80
+      }
+    },
+    {
+      "type": "command",
+      "command": "goto",
+      "params": {
+        "scene": "Act01_Chapter01/Act01_Chapter01_Adv03",
+        "soft": true
+      }
+    }
+  ]
+}

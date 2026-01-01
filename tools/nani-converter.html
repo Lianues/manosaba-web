@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naninovel 转 JSON 转换器</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      color: #4a9eff;
+      margin-bottom: 20px;
+    }
+    .settings {
+      background: #16213e;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+    }
+    .setting-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #888;
+      font-size: 14px;
+    }
+    .setting-group input {
+      width: 100%;
+      padding: 10px;
+      background: #0f0f23;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .editor-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      height: 60vh;
+    }
+    .editor-panel {
+      display: flex;
+      flex-direction: column;
+    }
+    .editor-panel h3 {
+      margin-bottom: 10px;
+      color: #4a9eff;
+    }
+    textarea {
+      flex: 1;
+      width: 100%;
+      padding: 15px;
+      background: #0f0f23;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Consolas', monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      resize: none;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+      justify-content: center;
+    }
+    button {
+      padding: 12px 30px;
+      background: #4a9eff;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #357abd;
+    }
+    button.secondary {
+      background: #444;
+    }
+    button.secondary:hover {
+      background: #555;
+    }
+    .stats {
+      background: #16213e;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .stats h4 {
+      margin-bottom: 10px;
+      color: #4a9eff;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .stat-item {
+      background: #0f0f23;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .stat-item .value {
+      font-size: 24px;
+      color: #4a9eff;
+      font-weight: bold;
+    }
+    .stat-item .label {
+      font-size: 12px;
+      color: #888;
+    }
+    .info-box {
+      background: #1e3a5f;
+      border-left: 4px solid #4a9eff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 0 8px 8px 0;
+    }
+    .info-box h4 {
+      color: #4a9eff;
+      margin-bottom: 10px;
+    }
+    .info-box ul {
+      margin-left: 20px;
+      color: #aaa;
+      font-size: 14px;
+    }
+    .info-box li {
+      margin-bottom: 5px;
+    }
+    .info-box code {
+      background: #0f0f23;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #7dd3fc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Naninovel 转 JSON 转换器</h1>
+    
+    <div class="info-box">
+      <h4>📖 支持的命令</h4>
+      <ul>
+        <li><code>@printer Normal.Stream</code> → 切换到直播模式</li>
+        <li><code>@printer Normal.Default</code> → 切换到默认模式</li>
+        <li><code>@print ".."</code> → 对话/旁白（自动匹配语音）</li>
+        <li><code>@char Ema.Surprised1 pos:50</code> → 显示立绘（表情预设）</li>
+        <li><code>@char Ema.Normal1,ArmR3 pos:50</code> → 组合立绘（表情+手臂）</li>
+        <li><code>@char SubId:"Middle" Coco.Normal1 pos:50,30 Scale:1.25</code> → 中间层立绘</li>
+        <li><code>@hideChars</code> → 隐藏所有立绘</li>
+        <li><code>@hide MainBackground,Warden</code> → 隐藏指定背景或角色</li>
+        <li><code>@ResetText</code> → 重置/清空文本框</li>
+        <li><code>@bgm "Bgm_XX_X"</code> → BGM播放</li>
+        <li><code>@StopBgm</code> → 停止BGM</li>
+        <li><code>@sfx "Sfx_N"</code> → 音效播放</li>
+        <li><code>@back X_Y</code> → 主背景</li>
+        <li><code>@back X_Y Id:"Stills" pos:X,Y Scale:N</code> → CG静画</li>
+        <li><code>@animate target posX:"60" time:"0.4"</code> → 动画命令</li>
+        <li><code>@blur "MainBackground-Middle" time:0</code> → 模糊效果</li>
+        <li><code>@Wait "0.2"</code> → 等待命令（秒）</li>
+        <li><code>@goto soft:true Act01_Chapter01/Act01_Chapter01_Adv02</code> → 跳转场景</li>
+        <li><code># Label</code> → 场景标签</li>
+      </ul>
+    </div>
+    
+    <div class="settings">
+      <div class="setting-group">
+        <label>场景 ID（输入后自动生成语音路径）</label>
+        <input type="text" id="sceneId" value="Act01_Chapter01_Adv02" placeholder="场景唯一标识，如 Act01_Chapter01_Adv02" oninput="updateVoicePaths()">
+      </div>
+      <div class="setting-group">
+        <label>语音基础路径（自动生成，可手动修改）</label>
+        <input type="text" id="voiceBasePath" value="/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02" placeholder="语音文件所在目录">
+      </div>
+      <div class="setting-group">
+        <label>语音文件前缀（自动生成，可手动修改）</label>
+        <input type="text" id="voicePrefix" value="0101Adv02" placeholder="如 0101Adv02">
+      </div>
+    </div>
+
+    <div class="editor-container">
+      <div class="editor-panel">
+        <h3>📄 Naninovel 脚本 (.nani)</h3>
+        <textarea id="naniInput" placeholder="粘贴 .nani 文件内容..."></textarea>
+      </div>
+      <div class="editor-panel">
+        <h3>📤 JSON 输出</h3>
+        <textarea id="jsonOutput" readonly placeholder="转换结果将显示在这里..."></textarea>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="convert()">🔄 转换</button>
+      <button class="secondary" onclick="copyOutput()">📋 复制 JSON</button>
+      <button class="secondary" onclick="downloadOutput()">💾 下载 JSON</button>
+    </div>
+
+    <div class="stats" id="stats" style="display: none;">
+      <h4>📊 转换统计</h4>
+      <div class="stats-grid" id="statsGrid"></div>
+    </div>
+  </div>
+
+  <script>
+/**
+ * 根据场景 ID 自动生成语音路径
+ * 例如：
+ * - Act01_Chapter01_Adv02 -> /Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02, 0101Adv02
+ * - Act02_Chapter03_Adv05 -> /Audio/Voice/Act02_Chapter03/Act02_Chapter03_Adv05, 0203Adv05
+ */
+function updateVoicePaths() {
+  const sceneId = document.getElementById('sceneId').value.trim();
+  
+  // 匹配场景 ID 格式: Act01_Chapter01_Adv02 或 Act01_Chapter01_Trial01 等
+  const match = sceneId.match(/^(Act(\d+))_(Chapter(\d+))_(\w+)(\d+)$/i);
+  
+  if (match) {
+    const actPart = match[1];      // Act01
+    const actNum = match[2];       // 01
+    const chapterPart = match[3];  // Chapter01
+    const chapterNum = match[4];   // 01
+    const sceneType = match[5];    // Adv, Trial, etc.
+    const sceneNum = match[6];     // 02
+    
+    // 生成基础路径: /Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv02
+    const folderName = `${actPart}_${chapterPart}`;
+    const voiceBasePath = `/Audio/Voice/${folderName}/${sceneId}`;
+    
+    // 生成前缀: 0101Adv02 (取 act 和 chapter 的数字部分，sceneNum 保持原样不补零)
+    const voicePrefix = `${actNum.padStart(2, '0')}${chapterNum.padStart(2, '0')}${sceneType}${sceneNum}`;
+    
+    document.getElementById('voiceBasePath').value = voiceBasePath;
+    document.getElementById('voicePrefix').value = voicePrefix;
+  } else {
+    // 如果格式不匹配，清空并让用户手动输入
+    document.getElementById('voiceBasePath').value = '';
+    document.getElementById('voicePrefix').value = '';
+  }
+}
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', function() {
+  updateVoicePaths();
+});
+
+// 角色名映射表
+const CHARACTER_MAP = {
+  'Ema': '樱羽艾玛',
+  'Hiro': '二阶堂希罗',
+  'Warden': '典狱长',
+  'Unknown': '???',
+  'Coco': '泽渡可可',
+  'Hanna': '远野汉娜',
+  'Miria': '佐伯米莉亚',
+  'Alisa': '紫藤亚里沙',
+  'AnAn': '夏目安安',
+  'Leia': '莲见蕾雅',
+  'Margo': '宝生玛格',
+  'Meruru': '冰上梅露露',
+  'Nanoka': '黑部奈叶香',
+  'Noah': '城崎诺亚',
+  'Sherry': '橘雪莉',
+};
+
+// 角色立绘基础路径映射（新的组合系统）
+const CHARACTER_BASE_PATH = {
+  'Ema': '/Characters/Ema',
+  'Hiro': '/Characters/Hiro',
+  'Warden': '/Characters/Warden',
+  'Alisa': '/Characters/Alisa',
+  'AnAn': '/Characters/AnAn',
+  'Coco': '/Characters/Coco',
+  'Hanna': '/Characters/Hanna',
+  'Leia': '/Characters/Leia',
+  'Margo': '/Characters/Margo',
+  'Meruru': '/Characters/Meruru',
+  'Miria': '/Characters/Miria',
+  'Nanoka': '/Characters/Nanoka',
+  'Noah': '/Characters/Noah',
+  'Sherry': '/Characters/Sherry',
+};
+
+// 支持的角色列表（用于验证）
+const SUPPORTED_CHARACTERS = ['Ema', 'Hiro', 'Warden', 'Alisa', 'AnAn', 'Coco', 'Hanna', 'Leia', 'Margo', 'Meruru', 'Miria', 'Nanoka', 'Noah', 'Sherry'];
+
+// SFX 路径映射 (Nani ID -> 实际文件名)
+const SFX_MAP = {
+  'Sfx_1': 'Sfx_Scenario_001 Wake up.ogg',
+  'Sfx_3': 'Sfx_Scenario_003 Monitor.ogg',
+  'Sfx_4': 'Sfx_Scenario_004 Lock prison.ogg',
+  'Sfx_5': 'Sfx_Scenario_005 Hikizuru oto.ogg',
+  'Sfx_6': 'Sfx_Scenario_006 Fall down.ogg',
+  'Sfx_18': 'Sfx_Scenario_018 Reject shake hands.ogg',
+  'Sfx_178': 'Sfx_Scenario_178 Landing sound.ogg',
+  // Common SFX
+  'Sfx_Common_1': 'Sfx_Common_001 Notice1.ogg',
+  'Sfx_Common_2': 'Sfx_Common_002 Notice2.ogg',
+  'Sfx_Common_3': 'Sfx_Common_003 Decision.ogg',
+  'Sfx_Common_4': 'Sfx_Common_004 Hit.ogg',
+  'Sfx_Common_5': 'Sfx_Common_005 Conversion.ogg',
+  'Sfx_Common_6': 'Sfx_Common_006 Be shocked.ogg',
+  'Sfx_Common_7': 'Sfx_Common_007 Negative down.ogg',
+};
+
+/**
+ * 将 SFX ID 转换为实际路径
+ * @param sfxId 如 "Sfx_1", "Sfx_178"
+ */
+function convertSfxPath(sfxId) {
+  // 先检查映射表
+  if (SFX_MAP[sfxId]) {
+    const fileName = SFX_MAP[sfxId];
+    if (fileName.startsWith('Sfx_Common')) {
+      return `/Audio/SFX/Common/${fileName}`;
+    } else {
+      return `/Audio/SFX/Scenario/${fileName}`;
+    }
+  }
+  
+  // 尝试自动解析 Sfx_N 格式
+  const match = sfxId.match(/^Sfx_(\d+)$/);
+  if (match) {
+    const num = match[1].padStart(3, '0');
+    // 默认假设是 Scenario 类型，文件名未知
+    return `/Audio/SFX/Scenario/Sfx_Scenario_${num}.ogg`;
+  }
+  
+  return `/Audio/SFX/${sfxId}.ogg`;
+}
+
+/**
+ * 将 Nani 背景ID 转换为实际文件路径
+ */
+function convertBackgroundPath(bgId, bgType = 'MainBackground') {
+  const match = bgId.match(/^(\d+)_(\d+)$/);
+  if (!match) {
+    return `/Background/${bgType}/RGB/${bgId}.png`;
+  }
+  
+  const [, major, minor] = match;
+  const paddedMajor = major.padStart(3, '0');
+  const paddedMinor = minor.padStart(3, '0');
+  
+  if (bgType === 'Stills') {
+    return `/Background/Stills/RGB/Still_${paddedMajor}_${paddedMinor}.png`;
+  } else if (bgType === 'Tricks') {
+    return `/Background/Tricks/RGB/Trick_${paddedMajor}_${paddedMinor}.png`;
+  } else {
+    return `/Background/MainBackground/RGB/Background_${paddedMajor}_${paddedMinor}.png`;
+  }
+}
+
+/**
+ * 解析 @char 命令，返回角色命令对象
+ * 支持新的组合系统语法：
+ * - @char Ema.Surprised1 pos:50 -> 角色 + 表情预设
+ * - @char Ema.Normal1,ArmR3 pos:50 -> 角色 + 表情 + 手臂
+ * - @char Hiro.Head1,Pale1-Off,... pos:45 -> 完整组合路径
+ * - @char SubId:"Middle" Warden.1 Scale:1.4 -> 中间层角色（单张立绘）
+ * - @char SubId:"Middle" Coco.Normal1 pos:50,30 Scale:1.25 -> 中间层角色（组合立绘）
+ * - @char SubId:"Middle" Nanoka pos:50,30 Scale:1.25 -> 中间层角色（默认外观）
+ */
+function parseCharCommand(line) {
+  // 检查是否是 SubId 类型的角色（中间层立绘）
+  if (line.includes('SubId:')) {
+    const subIdMatch = line.match(/SubId:"([^"]+)"/);
+    // 支持 Warden.1 或 Coco.Normal1 或纯角色名 Nanoka 这样的格式
+    // 注意：外观参数可能包含连字符，如 Option-ArmL-Off
+    const charWithAppearanceMatch = line.match(/([A-Za-z]+)\.([A-Za-z0-9_,\-]+)/);
+    const charOnlyMatch = line.match(/SubId:"[^"]+"\s+([A-Za-z]+)(?:\s|$)/);
+    const scaleMatch = line.match(/Scale:([\d.]+)/);
+    // 解析 pos:X,Y 或 pos:X 格式
+    const posMatch = line.match(/pos:(-?[\d.]+)(?:,(-?[\d.]+))?/);
+    
+    let charId, appearanceStr;
+    
+    if (charWithAppearanceMatch) {
+      charId = charWithAppearanceMatch[1];   // "Coco"
+      appearanceStr = charWithAppearanceMatch[2];  // "Normal1" 或 "1" 或 "Normal1,ArmL2"
+    } else if (charOnlyMatch && subIdMatch) {
+      charId = charOnlyMatch[1];  // "Nanoka"
+      appearanceStr = 'Default';  // 默认外观
+    } else {
+      return null;
+    }
+    
+    if (!subIdMatch) return null;
+    
+    const subId = subIdMatch[1];  // "Middle"
+    const scale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
+    
+    const params = {
+      id: charId,
+      subId: subId,
+      scale: scale
+    };
+    
+    // 解析位置
+    if (posMatch) {
+      params.posX = parseFloat(posMatch[1]);
+      if (posMatch[2] !== undefined) {
+        params.posY = parseFloat(posMatch[2]);
+      }
+    }
+    
+    // 解析外观组合
+    const appearance = appearanceStr.split(',').map(s => s.trim()).filter(Boolean);
+    params.appearance = appearance;
+    
+    return {
+      type: 'command',
+      command: 'charMiddle',
+      params: params
+    };
+  }
+  
+  // 匹配 @char 角色.[组合列表] pos:位置
+  // 支持复杂的组合路径，包括 Angle01/Head01/... 格式
+  // 注意：外观参数可能包含连字符，如 Option-ArmL-Off
+  const match = line.match(/@char\s+([A-Za-z]+)(?:\.([^\s]+))?(?:\s+pos:(\d+))?/);
+  if (!match) {
+    return null;
+  }
+  
+  const charId = match[1];
+  const appearanceStr = match[2] || 'Default';
+  const position = match[3] ? parseInt(match[3]) : 50;
+  
+  // 检查是否是支持的角色
+  if (!SUPPORTED_CHARACTERS.includes(charId)) {
+    return null;
+  }
+  
+  // 解析外观组合列表
+  // 可以是简单的 "Surprised1" 或 "Normal1,ArmR3" 或完整路径
+  const appearance = appearanceStr.split(',').map(s => s.trim()).filter(Boolean);
+  
+  return {
+    type: 'command',
+    command: 'char',
+    params: {
+      id: charId,
+      appearance: appearance,
+      position: position
+    }
+  };
+}
+
+/**
+ * 解析隐藏角色命令
+ * @hideChars - 隐藏所有角色
+ * @hide Hiro - 隐藏指定角色
+ */
+function parseHideCharsCommand(line) {
+  // 隐藏所有角色
+  if (line.startsWith('@hideChars')) {
+    return {
+      type: 'command',
+      command: 'hideChars'
+    };
+  }
+  
+  // 隐藏指定角色或背景: @hide Hiro, MainBackground
+  const hideMatch = line.match(/@hide\s+([^\s]+)/);
+  if (hideMatch) {
+    const id = hideMatch[1];
+    return {
+      type: 'command',
+      command: 'hide',
+      params: {
+        id: id
+      }
+    };
+  }
+  
+  return null;
+}
+
+/**
+ * 解析重置文本命令
+ */
+function parseResetTextCommand(line) {
+  if (line.trim().toLowerCase() === '@resettext') {
+    return {
+      type: 'command',
+      command: 'resetText',
+      params: {}
+    };
+  }
+  return null;
+}
+
+function parsePrintCommand(line, voiceCounter, options) {
+  const textMatch = line.match(/@print\s+"([^"]*)"/);
+  if (!textMatch) return null;
+  
+  let text = textMatch[1];
+  text = text.replace(/<br>/g, '\n');
+  text = text.replace(/　/g, ' ');
+  
+  const result = {
+    type: 'text',
+    text: text
+  };
+  
+  const authorMatch = line.match(/author:"([^"]+)"/);
+  if (authorMatch) {
+    const authorId = authorMatch[1];
+    result.speaker = CHARACTER_MAP[authorId] || authorId;
+    
+    if (options.voiceBasePath && options.voicePrefix) {
+      voiceCounter[authorId] = (voiceCounter[authorId] || 0) + 1;
+      const voiceNum = voiceCounter[authorId].toString().padStart(3, '0');
+      result.voice = `${options.voiceBasePath}/${options.voicePrefix}_${authorId}${voiceNum}.ogg`;
+    }
+  }
+  
+  return result;
+}
+
+function parseBgmCommand(line) {
+  const match = line.match(/@bgm\s+"([^"]+)"/);
+  if (!match) return null;
+  
+  const bgmId = match[1];
+  
+  return {
+    type: 'command',
+    command: 'bgm',
+    params: { path: bgmId }  // 直接保留简写格式，让 game.ts 在运行时解析
+  };
+}
+
+function parseStopBgmCommand(line) {
+  if (line.trim().toLowerCase() === '@stopbgm') {
+    return {
+      type: 'command',
+      command: 'bgm',
+      params: { action: 'stop' }
+    };
+  }
+  return null;
+}
+
+/**
+ * 解析 @sfx 命令
+ */
+function parseSfxCommand(line) {
+  const match = line.match(/@sfx\s+"([^"]+)"/);
+  if (!match) return null;
+  
+  const sfxId = match[1];
+  const sfxPath = convertSfxPath(sfxId);
+  
+  return {
+    type: 'command',
+    command: 'sfx',
+    params: { path: sfxPath }
+  };
+}
+
+/**
+ * 解析 @animate 命令
+ * @animate Stills-Middle posX:"60" posY:"-20" easing:"EaseOutBack" time:"0.4"
+ */
+function parseAnimateCommand(line) {
+  const targetMatch = line.match(/@animate\s+([^\s]+)/);
+  if (!targetMatch) return null;
+  
+  const target = targetMatch[1];
+  const params = { target };
+  const props = {};
+  
+  // 解析带引号的参数
+  const getQuoted = (key) => {
+    const m = line.match(new RegExp(`${key}:"([^"]+)"`));
+    return m ? m[1] : null;
+  };
+  
+  const posX = getQuoted('posX');
+  const posY = getQuoted('posY');
+  const scale = getQuoted('scale');
+  const easing = getQuoted('easing');
+  const time = getQuoted('time');
+  
+  if (posX !== null) props.posX = parseFloat(posX);
+  if (posY !== null) props.posY = parseFloat(posY);
+  if (scale !== null) props.scale = parseFloat(scale);
+  
+  params.props = props;
+  if (easing) params.easing = easing;
+  if (time) params.duration = parseFloat(time);
+  
+  return {
+    type: 'command',
+    command: 'animate',
+    params
+  };
+}
+
+/**
+ * 解析 @blur 命令
+ * @blur "MainBackground-Middle" time:0
+ * @blur "MainBackground" power:3 time:0.5
+ */
+function parseBlurCommand(line) {
+  // 匹配目标（带引号或不带引号）
+  const targetMatch = line.match(/@blur\s+(?:"([^"]+)"|([^\s]+))/);
+  if (!targetMatch) return null;
+  
+  const target = targetMatch[1] || targetMatch[2];
+  const params = { target };
+  
+  // 解析 power 参数（模糊强度）
+  const powerMatch = line.match(/power:([\d.]+)/);
+  if (powerMatch) {
+    params.power = parseFloat(powerMatch[1]);
+  }
+  
+  // 解析 time 参数
+  const timeMatch = line.match(/time:([\d.]+)/);
+  if (timeMatch) {
+    params.duration = parseFloat(timeMatch[1]);
+  }
+  
+  return {
+    type: 'command',
+    command: 'blur',
+    params
+  };
+}
+
+// Naninovel 默认背景缩放值
+const g_backgroundDefaultScale = 1;
+
+function parseBackCommand(line) {
+  // 检查是否是 Stills 类型
+  const isStills = line.includes('Id:"Stills"');
+  const isTransparent = line.includes('Transparent');
+  const isSolidColor = line.includes('SolidColor');
+  
+  // 匹配背景ID (如 1_1, 490_1)
+  const bgIdMatch = line.match(/@back\s+(?:SubId:"[^"]+"\s+)?([\d]+_[\d]+)/);
+  
+  // 如果既没有 ID 也没有 Transparent/SolidColor，则可能是纯颜色或其他特殊指令
+  if (!bgIdMatch && !isTransparent && !isSolidColor) {
+    return null;
+  }
+  
+  const params = {};
+  
+  if (bgIdMatch) {
+    const bgId = bgIdMatch[1];
+    const bgType = isStills ? 'Stills' : 'MainBackground';
+    params.path = convertBackgroundPath(bgId, bgType);
+  } else if (isSolidColor) {
+    // SolidColor 表示纯色遮罩（通常用于 Overlay 层）
+    params.path = 'SolidColor';
+  } else {
+    params.path = null; // 透明/清空层
+  }
+  
+  // 解析 SubId (层级)
+  const subIdMatch = line.match(/SubId:"([^"]+)"/);
+  if (subIdMatch) params.subId = subIdMatch[1];
+
+  // 解析 tint (色调/遮罩颜色)
+  const tintMatch = line.match(/tint:"#?([0-9a-fA-F]+)"/);
+  if (tintMatch) params.tint = `#${tintMatch[1]}`;
+  
+  // 解析 pos 参数 (pos:X,Y 或 pos:X)
+  const posMatch = line.match(/pos:\s*(-?[\d.]+)\s*(?:,\s*(-?[\d.]+))?/);
+  if (posMatch) {
+    params.posX = parseFloat(posMatch[1]);
+    if (posMatch[2] !== undefined) {
+      params.posY = parseFloat(posMatch[2]);
+    }
+  }
+  
+  // 解析 Scale 参数
+  const scaleExpressionMatch = line.match(/Scale:\{[^}]*?\*\s*([\d.]+)\}/);
+  if (scaleExpressionMatch) {
+    params.scale = parseFloat(scaleExpressionMatch[1]);
+  } else {
+    const simpleScaleMatch = line.match(/Scale:\s*(-?[\d.]+)/);
+    if (simpleScaleMatch) {
+      params.scale = parseFloat(simpleScaleMatch[1]);
+    }
+  }
+  
+  // 解析 Rotation 参数 (Rotation:X,Y,Z)
+  const rotationMatch = line.match(/Rotation:([^\s]*)/);
+  if (rotationMatch) {
+    const rotParts = rotationMatch[1].split(',');
+    if (rotParts[0]) params.rotX = parseFloat(rotParts[0]);
+    if (rotParts[1]) params.rotY = parseFloat(rotParts[1]);
+    if (rotParts[2]) params.rotZ = parseFloat(rotParts[2]);
+  }
+  
+  // 解析 time 参数
+  const timeMatch = line.match(/time:([\d.]+)/);
+  if (timeMatch) {
+    params.duration = parseFloat(timeMatch[1]);
+  }
+  
+  return {
+    type: 'command',
+    command: 'bg',
+    params: params
+  };
+}
+
+/**
+ * 解析 @Wait 命令
+ * @Wait "0.2" 或 @Wait 0.5
+ */
+function parseWaitCommand(line) {
+  const match = line.match(/@Wait\s+(?:"([^"]+)"|([\d.]+))/i);
+  if (!match) return null;
+  
+  const waitTime = match[1] || match[2];
+  
+  return {
+    type: 'command',
+    command: 'wait',
+    params: { time: parseFloat(waitTime) }
+  };
+}
+
+/**
+ * 解析 @goto 命令
+ * @goto soft:true Act01_Chapter01/Act01_Chapter01_Adv02
+ * @goto Act01_Chapter01/Act01_Chapter01_Adv02
+ */
+function parseGotoCommand(line) {
+  // 匹配 soft 参数
+  const softMatch = line.match(/soft:(true|false)/i);
+  const soft = softMatch ? softMatch[1].toLowerCase() === 'true' : false;
+  
+  // 匹配场景路径 (最后一个参数，不包含 : 的部分)
+  const parts = line.split(/\s+/);
+  let scenePath = null;
+  for (let i = parts.length - 1; i >= 0; i--) {
+    if (!parts[i].includes(':') && !parts[i].startsWith('@')) {
+      scenePath = parts[i];
+      break;
+    }
+  }
+  
+  if (!scenePath) {
+    return null;
+  }
+  
+  return {
+    type: 'command',
+    command: 'goto',
+    params: {
+      scene: scenePath,
+      soft: soft
+    }
+  };
+}
+
+/**
+ * 解析 @EmoteJumpDouble 命令
+ * @EmoteJumpDouble Sherry-Middle -> 角色立绘向上小跳两下
+ */
+function parseEmoteJumpDoubleCommand(line) {
+  const match = line.match(/@EmoteJumpDouble\s+([^\s]+)/i);
+  if (!match) return null;
+  
+  const target = match[1];
+  // 解析目标: Sherry-Middle -> id=Sherry, subId=Middle
+  const parts = target.split('-');
+  const charId = parts[0];
+  const subId = parts.length > 1 ? parts[1] : null;
+  
+  return {
+    type: 'command',
+    command: 'emoteJumpDouble',
+    params: {
+      id: charId,
+      subId: subId
+    }
+  };
+}
+
+/**
+ * 解析 @printer 命令
+ * @printer Normal.Stream -> 切换到直播模式
+ * @printer Normal.Default -> 切换到默认模式
+ */
+function parsePrinterCommand(line) {
+  const match = line.match(/@printer\s+([A-Za-z]+)\.([A-Za-z]+)/i);
+  if (!match) return null;
+  
+  const printerType = match[1]; // Normal
+  const appearance = match[2];  // Stream, Default
+  
+  return {
+    type: 'command',
+    command: 'printer',
+    params: {
+      type: printerType,
+      appearance: appearance.toLowerCase() // stream, default
+    }
+  };
+}
+
+function parseLabelCommand(line) {
+  const match = line.match(/^#\s*(.+)$/);
+  if (!match) return null;
+  
+  return {
+    type: 'label',
+    name: match[1].trim()
+  };
+}
+
+function convertNaniToJson(naniContent, options) {
+  const lines = naniContent.split(/\r?\n/);
+  const scriptLines = [];
+  const voiceCounter = {};
+  const stats = {
+    totalLines: 0,
+    dialogues: 0,
+    narrations: 0,
+    commands: 0,
+    backgrounds: 0,
+    charCommands: 0,
+    sfxCommands: 0,
+    voices: {},
+  };
+  
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith(';')) continue;
+    
+    stats.totalLines++;
+    let parsed = null;
+    
+    if (line.startsWith('#')) {
+      parsed = parseLabelCommand(line);
+    }
+    else if (line.startsWith('@char')) {
+      parsed = parseCharCommand(line);
+      if (parsed) stats.charCommands++;
+    }
+    else if (line.startsWith('@hideChars') || line.startsWith('@hide ')) {
+      parsed = parseHideCharsCommand(line);
+      if (parsed) stats.charCommands++;
+    }
+    else if (line.toLowerCase().startsWith('@resettext')) {
+      parsed = parseResetTextCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.toLowerCase().startsWith('@printer')) {
+      parsed = parsePrinterCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.startsWith('@print')) {
+      parsed = parsePrintCommand(line, voiceCounter, options);
+      if (parsed) {
+        if (parsed.speaker) {
+          stats.dialogues++;
+        } else {
+          stats.narrations++;
+        }
+      }
+    }
+    else if (line.startsWith('@bgm')) {
+      parsed = parseBgmCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.toLowerCase().startsWith('@stopbgm')) {
+      parsed = parseStopBgmCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.startsWith('@back')) {
+      parsed = parseBackCommand(line);
+      if (parsed) stats.backgrounds++;
+    }
+    else if (line.startsWith('@sfx')) {
+      parsed = parseSfxCommand(line);
+      if (parsed) stats.sfxCommands++;
+    }
+    else if (line.startsWith('@animate')) {
+      parsed = parseAnimateCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.startsWith('@blur')) {
+      parsed = parseBlurCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.toLowerCase().startsWith('@wait')) {
+      parsed = parseWaitCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.toLowerCase().startsWith('@goto')) {
+      parsed = parseGotoCommand(line);
+      if (parsed) stats.commands++;
+    }
+    else if (line.toLowerCase().startsWith('@emotejumpdouble')) {
+      parsed = parseEmoteJumpDoubleCommand(line);
+      if (parsed) stats.commands++;
+    }
+    
+    if (parsed) {
+      scriptLines.push(parsed);
+    }
+  }
+  
+  stats.voices = { ...voiceCounter };
+  
+  const scene = {
+    id: options.sceneId,
+    type: options.sceneType || 'traditional',
+    lines: scriptLines
+  };
+  
+  return { scene, stats };
+}
+
+function convert() {
+  const naniInput = document.getElementById('naniInput').value;
+  const sceneId = document.getElementById('sceneId').value;
+  const voiceBasePath = document.getElementById('voiceBasePath').value;
+  const voicePrefix = document.getElementById('voicePrefix').value;
+  
+  if (!naniInput.trim()) {
+    alert('请粘贴 Naninovel 脚本内容');
+    return;
+  }
+  
+  const { scene, stats } = convertNaniToJson(naniInput, {
+    sceneId,
+    sceneType: 'traditional',
+    voiceBasePath,
+    voicePrefix
+  });
+  
+  document.getElementById('jsonOutput').value = JSON.stringify(scene, null, 2);
+  
+  // 显示统计
+  const statsDiv = document.getElementById('stats');
+  const statsGrid = document.getElementById('statsGrid');
+  statsDiv.style.display = 'block';
+  
+  let statsHtml = `
+    <div class="stat-item">
+      <div class="value">${scene.lines.length}</div>
+      <div class="label">总条目数</div>
+    </div>
+    <div class="stat-item">
+      <div class="value">${stats.dialogues}</div>
+      <div class="label">对话</div>
+    </div>
+    <div class="stat-item">
+      <div class="value">${stats.narrations}</div>
+      <div class="label">旁白</div>
+    </div>
+    <div class="stat-item">
+      <div class="value">${stats.backgrounds}</div>
+      <div class="label">背景切换</div>
+    </div>
+    <div class="stat-item">
+      <div class="value">${stats.charCommands}</div>
+      <div class="label">立绘命令</div>
+    </div>
+    <div class="stat-item">
+      <div class="value">${stats.commands}</div>
+      <div class="label">BGM命令</div>
+    </div>
+    <div class="stat-item">
+      <div class="value">${stats.sfxCommands}</div>
+      <div class="label">SFX音效</div>
+    </div>
+  `;
+  
+  for (const [char, count] of Object.entries(stats.voices)) {
+    const charName = CHARACTER_MAP[char] || char;
+    statsHtml += `
+      <div class="stat-item">
+        <div class="value">${count}</div>
+        <div class="label">${charName} 语音</div>
+      </div>
+    `;
+  }
+  
+  statsGrid.innerHTML = statsHtml;
+}
+
+function copyOutput() {
+  const output = document.getElementById('jsonOutput');
+  output.select();
+  document.execCommand('copy');
+  alert('已复制到剪贴板');
+}
+
+function downloadOutput() {
+  const output = document.getElementById('jsonOutput').value;
+  if (!output) {
+    alert('请先转换');
+    return;
+  }
+  
+  const sceneId = document.getElementById('sceneId').value || 'scene';
+  const blob = new Blob([output], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${sceneId}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+  </script>
+</body>
+</html>

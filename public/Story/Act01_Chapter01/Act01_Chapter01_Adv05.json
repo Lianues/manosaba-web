@@ -1,0 +1,1171 @@
+{
+  "id": "Act01_Chapter01_Adv05",
+  "type": "traditional",
+  "lines": [
+    {
+      "type": "label",
+      "name": "Scene1-1-1"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 1.2
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.8
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_21_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "沾满鲜血的会客厅内，\n少女们陷入了恐慌。"
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Jailer",
+        "props": {
+          "posX": 30
+        },
+        "duration": 2
+      }
+    },
+    {
+      "type": "text",
+      "text": "………",
+      "speaker": "Jailer",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Jailer001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_005 Hikizuru oto.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "唯一在室内缓慢行动的，\n只有看守了。"
+    },
+    {
+      "type": "text",
+      "text": "看守正在打扫二阶堂希罗的尸体。\n在此作业期间——"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Alisa",
+        "appearance": [
+          "Fearful1",
+          "Option-ArmL-Off",
+          "ArmR2",
+          "ArmL4"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "呜……！",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Alisa001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "有一位难耐恐惧的少女\n猛然开始狂奔。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "看守对逃跑行动作出了反应。\n它开始以迅猛之势追赶那位少女，紫藤亚里沙。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "（危险！）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Jailer",
+        "subId": "Middle",
+        "scale": 1,
+        "appearance": [
+          "1"
+        ]
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Jailer-Middle",
+        "props": {
+          "posX": 15,
+          "posY": 8
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "跟在亚里沙身后的看守，手上的镰刀亮起寒光。"
+    },
+    {
+      "type": "text",
+      "text": "面对即将二度降临的悲剧，\n大部分少女都捂住了眼睛，发出了惊叫声。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "text",
+      "text": "等一下！",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "一位少女用威严的声音说道。\n在场的所有人都回过神来看着她。"
+    },
+    {
+      "type": "text",
+      "text": "那位少女——莲见蕾雅\n拔出了腰间的刺剑，站到亚里沙和看守二位中间。"
+    },
+    {
+      "type": "text",
+      "text": "不许对她出手！\n我不会再让悲剧发生！",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Jailer",
+        "subId": "Middle",
+        "scale": 1,
+        "posX": 15,
+        "appearance": [
+          "1"
+        ]
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Jailer-Middle",
+        "props": {
+          "posX": 85,
+          "posY": 8
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "看守似乎没有听进去，\n继续用力挥下镰刀。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_009.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "（不要再这样了——！）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "text",
+      "text": "艾玛她……"
+    },
+    {
+      "type": "command",
+      "command": "goto",
+      "params": {
+        "scene": "Act01_Chapter01/Act01_Chapter01_Bad01",
+        "soft": false
+      }
+    },
+    {
+      "type": "command",
+      "command": "goto",
+      "params": {
+        "scene": ".Choice1-1-1",
+        "soft": false
+      }
+    },
+    {
+      "type": "label",
+      "name": "Choice1-1-1"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "——哈！",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_178 Landing sound.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "蕾雅瞬间往后方跳去，\n让看守砍了个空。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Alisa",
+        "appearance": [
+          "Surprised1",
+          "Option-ArmL-Off",
+          "ArmR2",
+          "ArmL4"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "蕾雅保持着握剑姿势，\n以坚决的眼神直视看守。"
+    },
+    {
+      "type": "text",
+      "text": "她没有违反规定。\n你没有理由杀她。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "在蕾雅身后站着的亚里沙\n大概是丧失了逃跑的欲望，呆站在原地一动不动。"
+    },
+    {
+      "type": "text",
+      "text": "你为什么……",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Alisa002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我想保护你们。\n所以，我们大家都应该冷静下来。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "…………",
+      "speaker": "Jailer",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Jailer002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "看守不再挥动镰刀，回到了原先的打扫作业中。\n或许，刚才的行动只是出于警告目的。"
+    },
+    {
+      "type": "text",
+      "text": "接着，它扛起希罗的尸体离开了房间。"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_5_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "随着看守的离开，\n少女之间紧绷的气氛终于有了稍许缓解。"
+    },
+    {
+      "type": "text",
+      "text": "只不过，尽管希罗的尸体已打扫干净，\n但室内仍充满着沉闷的血液气味。"
+    },
+    {
+      "type": "text",
+      "text": "刚刚有人说过，\n这个房间【很臭】。"
+    },
+    {
+      "type": "text",
+      "text": "会客厅装点着恶趣味装饰，散发着邪气。"
+    },
+    {
+      "type": "text",
+      "text": "如果说，这里的绒毯、沙发、窗帘，每样东西都在长年累月间\n吮吸着少女们的鲜血——"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Coco",
+        "appearance": [
+          "Fearful1",
+          "ArmL8"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "呜，呕呕呕……",
+      "speaker": "泽渡可可",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Coco001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "一想到这些或许就是事实，可可便吐了出来。"
+    },
+    {
+      "type": "text",
+      "text": "到现在都没人想吐，这才是怪事。\n现在的状况，就是如此地脱离常轨。"
+    },
+    {
+      "type": "text",
+      "text": "这时有人站到了中间。\n不用多想，那就是蕾雅。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR3"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "大家，请听我说！",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "看来，我们被迫只能在这里共同生活了。\n虽然不知道要待到什么时候……\n现在我们还是乖乖照做吧。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "尽管我们才刚认识不久，\n但是我想尽量保护你们。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia008.ogg"
+    },
+    {
+      "type": "text",
+      "text": "像刚才希罗作出的举动，\n还有像亚里沙刚才那样的逃跑行为，\n有可能会危及我们所有人。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia009.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我希望大家今后可以谨慎行动。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia010.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Alisa",
+        "appearance": [
+          "Angry1",
+          "Option-ArmL-Off",
+          "ArmR2",
+          "ArmL2"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "啧……",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Alisa003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "亚里沙无法反驳，\n只好咂了咂舌宣泄不满。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "……首先，请大家看一下自己的口袋。\n应该每个人都发了一部手机。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia011.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "听蕾雅这么讲，\n所有人都摸了摸自己的口袋。"
+    },
+    {
+      "type": "text",
+      "text": "（真的欸……虽然不是我自己的，\n 不过确实有一部智能手机……\n 难道可以用它联络外界！？）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "遗憾的是，没有信号，\n不能用来和外界联络。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia012.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我们是被抓来这个地方的，\n有信号才奇怪……",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia013.ogg"
+    },
+    {
+      "type": "text",
+      "text": "希望瞬间破灭，\n艾玛失望地垂下肩膀。"
+    },
+    {
+      "type": "text",
+      "text": "在手机里面，\n有一个叫【魔女图鉴】的APP。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia014.ogg"
+    },
+    {
+      "type": "text",
+      "text": "刚才典狱长也讲了，\n【魔女图鉴】好像就是规则手册。\n里面收录了监牢的地图和规定，还有我们囚犯的资料。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia015.ogg"
+    },
+    {
+      "type": "text",
+      "text": "请大家都认真去看【魔女图鉴】里面\n记录的规定，一起生活下去吧。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia016.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Alisa",
+        "appearance": [
+          "Angry1",
+          "Option-ArmL-Off",
+          "ArmR2",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "……开什么玩笑！\n我才不管什么规定不规定！",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Alisa004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "什么魔女什么囚犯都见鬼去吧！\n我一秒都不想待在这个地方。\n我要离开这里！",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Alisa005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "面对咬牙切齿的亚里沙，\n蕾雅忧愁地叹了口气。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR5"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "你要是再表现出反抗的态度，\n我可不知道看守会对你做出什么事来。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia017.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Alisa",
+        "appearance": [
+          "Angry1",
+          "Option-ArmL-Off"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "跟你没关系吧，你管我！",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Alisa006.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "亚里沙咂了咂舌，离开了会客厅。\n蕾雅无可奈何地耸了耸肩。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "除了她，剩下来的人应该可以好好配合吧？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia018.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Determined2",
+          "ArmR3",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "……我也，不愿意。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛往前走出一步，开口说道。"
+    },
+    {
+      "type": "text",
+      "text": "我才不要听，杀死希罗的\n那帮家伙讲的话！\n我绝对不会原谅它们！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "双眼闪着泪花的艾玛坚定说道。\n蕾雅露出了有些惊讶的表情。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "是这样啊。\n你好像认识希罗，对吗。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia019.ogg"
+    },
+    {
+      "type": "text",
+      "text": "不过在我看来，你们好像关系并不是很好？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia020.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Pensive1",
+          "ArmR3",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "因为，希罗她……\n希罗她是一个正直的人……",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema006.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR5"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "蕾雅轻轻叹了口气。"
+    },
+    {
+      "type": "text",
+      "text": "唉，我知道你不打算遵守了。\n我也不会强迫你。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia021.ogg"
+    },
+    {
+      "type": "text",
+      "text": "不过，我希望大家可以温和一些。\n我们无法和引来危险的分子一起行动。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia022.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1",
+          "ArmL6"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "command",
+      "command": "emoteJumpDouble",
+      "params": {
+        "id": "Sherry",
+        "subId": null
+      }
+    },
+    {
+      "type": "text",
+      "text": "我也来我也来！\n我也要选艾玛这边～！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Sherry001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "雪莉兴奋地举起了手。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛惊讶得张大了双眼，\n事情的发展超出了她的预料。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1",
+          "ArmL8"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "选边就要选有趣的一边，这就是我的信条！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Sherry002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1",
+          "ArmR13",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "而艾玛你！\n我从你的身上闻到了一股超浓郁的有趣味道！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Sherry003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR3",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "浓郁的，味道……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "不知何时，艾玛的身边\n又多了汉娜和梅露露两个人。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 20
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Meruru",
+        "appearance": [
+          "Default"
+        ],
+        "position": 80
+      }
+    },
+    {
+      "type": "text",
+      "text": "我也要和你站一边。\n本小姐最讨厌那种一副大人物的样子指指点点的人了。",
+      "speaker": "远野汉娜",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Hanna001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "看样子，她并没有想着支持艾玛，\n而只是单纯地看不惯蕾雅。\n虽然自尊受伤，不过还蛮有骨气的。"
+    },
+    {
+      "type": "text",
+      "text": "呜呜……艾玛小姐……",
+      "speaker": "冰上梅露露",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Meruru001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "而梅露露好像有点怕生，\n她紧紧贴住了艾玛。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1",
+          "ArmR1",
+          "ArmL11"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "哎呀呀～？\n意见分成两派了耶。",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Sherry004.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR5"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "……看来的确如此。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia023.ogg"
+    },
+    {
+      "type": "text",
+      "text": "大家能齐心协力度过难关那就最好，\n不过意见不合就没办法了。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia024.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我们先回地下去吧。\n根据规定，现在是必须待在地下牢房内的时间。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Leia025.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "蕾雅动身后，\n决定和她坐同一条船的少女们\n也都跟在她身后离开了。"
+    },
+    {
+      "type": "text",
+      "text": "留在会客厅内的，\n就只剩艾玛、雪莉、汉娜和梅露露4个人。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1",
+          "ArmR1",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "command",
+      "command": "emoteJumpDouble",
+      "params": {
+        "id": "Sherry",
+        "subId": null
+      }
+    },
+    {
+      "type": "text",
+      "text": "然后呢然后呢？？我们接下来做什么？\n大家齐心协力去弄死看守？",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Sherry005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR1",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "不、不可以啦。\n会像希罗那样被杀死的。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema008.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "（不能原谅杀死希罗的看守，还有典狱长……\n 可是……）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema009.ogg"
+    },
+    {
+      "type": "text",
+      "text": "（不多加考虑冲动行事，只会落得同样的下场。\n 我一定要冷静行动）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema010.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "……总之，我们先回地下去吧。\n我们也应该看一下规定才对。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema011.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "嗯说的也是呢。",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Sherry006.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Determined2"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "不过我并不打算坐以待毙。\n……它们杀死了希罗，\n我绝不会原谅。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema012.ogg"
+    },
+    {
+      "type": "command",
+      "command": "goto",
+      "params": {
+        "scene": "Act01_Chapter01/Act01_Chapter01_Adv06",
+        "soft": true
+      }
+    }
+  ]
+}

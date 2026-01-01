@@ -1,0 +1,92 @@
+/**
+ * Sherry 角色组合配置
+ * 基于 Naninovel 的 CompositionMap 格式
+ */
+import type { CharacterCompositionConfig } from '../../types/composition'
+import { buildCompositionConfig } from '../../types/composition'
+
+/** Sherry 的原始组合映射数据 */
+const compositionMapData = [
+  // ============ 左手臂 ArmL ============
+  { Key: 'ArmL1', Composition: 'Angle01/ArmL>ArmL01' },
+  { Key: 'ArmL2', Composition: 'Angle01/ArmL>ArmL02' },
+  { Key: 'ArmL3', Composition: 'Angle01/ArmL>ArmL03' },
+  { Key: 'ArmL4', Composition: 'Angle01/ArmL>ArmL04' },
+  { Key: 'ArmL5', Composition: 'Angle01/ArmL>ArmL05' },
+  { Key: 'ArmL6', Composition: 'Angle01/ArmL>ArmL06' },
+  { Key: 'ArmL7', Composition: 'Angle01/ArmL>ArmL07' },
+  { Key: 'ArmL8', Composition: 'Angle01/ArmL>ArmL08' },
+  { Key: 'ArmL9', Composition: 'Angle01/ArmL>ArmL09' },
+  { Key: 'ArmL10', Composition: 'Angle01/ArmL>ArmL10' },
+  { Key: 'ArmL11', Composition: 'Angle01/ArmL>ArmL11' },
+  { Key: 'ArmL12', Composition: 'Angle01/ArmL>ArmL12' },
+  { Key: 'ArmL13', Composition: 'Angle01/ArmL>ArmL13' },
+  { Key: 'ArmL14', Composition: 'Angle01/ArmL>ArmL14' },
+  
+  // ============ 右手臂 ArmR ============
+  { Key: 'ArmR1', Composition: 'Angle01/ArmR>ArmR01' },
+  { Key: 'ArmR2', Composition: 'Angle01/ArmR>ArmR02' },
+  { Key: 'ArmR3', Composition: 'Angle01/ArmR>ArmR03' },
+  { Key: 'ArmR4', Composition: 'Angle01/ArmR>ArmR04' },
+  { Key: 'ArmR5', Composition: 'Angle01/ArmR>ArmR05' },
+  { Key: 'ArmR6', Composition: 'Angle01/ArmR>ArmR06' },
+  { Key: 'ArmR7', Composition: 'Angle01/ArmR>ArmR07' },
+  { Key: 'ArmR8', Composition: 'Angle01/ArmR>ArmR08' },
+  { Key: 'ArmR9', Composition: 'Angle01/ArmR>ArmR09' },
+  { Key: 'ArmR10', Composition: 'Angle01/ArmR>ArmR10' },
+  { Key: 'ArmR11', Composition: 'Angle01/ArmR>ArmR11' },
+  { Key: 'ArmR12', Composition: 'Angle01/ArmR>ArmR12' },
+  { Key: 'ArmR13', Composition: 'Angle01/ArmR>ArmR13' },
+  { Key: 'ArmR14', Composition: 'Angle01/ArmR>ArmR14' },
+  { Key: 'ArmR15', Composition: 'Angle01/ArmR>ArmR15' },
+  { Key: 'ArmR16', Composition: 'Angle01/ArmR>ArmR16' },
+  { Key: 'ArmR17', Composition: 'Angle01/ArmR>ArmR17' },
+  { Key: 'ArmR18', Composition: 'Angle01/ArmR>ArmR18' },
+  { Key: 'ArmR19', Composition: 'Angle01/ArmR>ArmR19' },
+  
+  // ============ 苍白效果 Pale ============
+  { Key: 'Pale-1', Composition: 'Angle01/Facial/Pale>Pale01' },
+  { Key: 'Pale-Off', Composition: 'Angle01/Facial/Pale-' },
+  
+  // ============ 汗滴效果 Sweat ============
+  { Key: 'Sweat-1', Composition: 'Angle01/Facial/Sweat>Sweat01' },
+  { Key: 'Sweat-Off', Composition: 'Angle01/Facial/Sweat-' },
+  
+  // ============ 脸颊 Cheeks ============
+  { Key: 'Cheeks-Normal', Composition: 'Angle01/Facial/Cheeks>Cheeks_Normal' },
+  { Key: 'Cheeks-Flushed', Composition: 'Angle01/Facial/Cheeks>Cheeks_Flushed' },
+  { Key: 'Cheeks-Off', Composition: 'Angle01/Facial/Cheeks-' },
+  
+  // ============ 表情预设 ============
+  { Key: 'Normal1', Composition: 'Pale-Off,Sweat-Off,Cheeks-Normal,Angle01/Facial/Eyes>Eyes_Normal_Open01,Angle01/Facial/Mouth>Mouth_Normal_Open' },
+  { Key: 'Smile1', Composition: 'Pale-Off,Sweat-Off,Cheeks-Normal,Angle01/Facial/Eyes>Eyes_Smile_Closed01,Angle01/Facial/Mouth>Mouth_Normal_Open' },
+  { Key: 'Angry1', Composition: 'Pale-Off,Sweat-Off,Cheeks-Normal,Angle01/Facial/Eyes>Eyes_Angry_Open01,Angle01/Facial/Mouth>Mouth_Angry_Closed' },
+  { Key: 'Pensive1', Composition: 'Pale-Off,Sweat-Off,Cheeks-Normal,Angle01/Facial/Eyes>Eyes_Pensive_Open01,Angle01/Facial/Mouth>Mouth_Pensive_Closed' },
+  { Key: 'Cry1', Composition: 'Pale-Off,Sweat-Off,Cheeks-Normal,Angle01/Facial/Eyes>Eyes_Cry_Open01,Angle01/Facial/Mouth>Mouth_Cry_Open' },
+  { Key: 'Flushed1', Composition: 'Pale-Off,Sweat-Off,Cheeks-Flushed,Angle01/Facial/Eyes>Eyes_Flushed_Closed01,Angle01/Facial/Mouth>Mouth_Flushed_Open' },
+  { Key: 'Surprised1', Composition: 'Pale-Off,Sweat-1,Cheeks-Normal,Angle01/Facial/Eyes>Eyes_Surprised_Open01,Angle01/Facial/Mouth>Mouth_Confused_Open' },
+  { Key: 'Fearful1', Composition: 'Pale-1,Sweat-1,Cheeks-Off,Angle01/Facial/Eyes>Eyes_Fearful_Open01,Angle01/Facial/Mouth>Mouth_Fearful_Open' },
+  
+  // ============ 别名/快捷方式 ============
+  { Key: 'Default', Composition: 'Normal1' },
+  { Key: 'Smile', Composition: 'Smile1' },
+  { Key: 'Angry', Composition: 'Angry1' },
+  { Key: 'Pensive', Composition: 'Pensive1' },
+  { Key: 'Cry', Composition: 'Cry1' },
+  { Key: 'Flushed', Composition: 'Flushed1' },
+  { Key: 'Surprised', Composition: 'Surprised1' },
+  { Key: 'Fearful', Composition: 'Fearful1' },
+]
+
+/** 默认外观 */
+const defaultAppearance = 'ArmL1,ArmR1,Default'
+
+/** 构建并导出 Sherry 的组合配置 */
+export const SherryCompositionConfig: CharacterCompositionConfig = buildCompositionConfig(
+  'Sherry',
+  '橘雪莉',
+  compositionMapData,
+  defaultAppearance
+)
+
+export default SherryCompositionConfig

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>UI 像素对齐工具 (差值对齐版)</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: #ccc; margin: 0; display: flex; height: 100vh; overflow: hidden; }
+        
+        /* 侧边栏控制区 */
+        .sidebar { width: 380px; background: #252526; padding: 20px; border-right: 1px solid #333; overflow-y: auto; box-shadow: 2px 0 10px rgba(0,0,0,0.5); z-index: 10; }
+        h2 { color: #fff; font-size: 18px; margin-top: 0; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .section { background: #333; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+        .section-title { font-weight: bold; color: #0078d4; margin-bottom: 10px; display: block; border-left: 3px solid #0078d4; padding-left: 8px; }
+        
+        .input-group { margin-bottom: 12px; }
+        label { display: block; font-size: 12px; color: #aaa; margin-bottom: 4px; }
+        input[type="number"], select { width: 100%; background: #444; border: 1px solid #555; color: #fff; padding: 6px; border-radius: 3px; box-sizing: border-box; }
+        .padding-ctrl { display: flex; align-items: center; gap: 10px; }
+        .padding-ctrl input[type="range"] { flex: 1; }
+        .padding-ctrl input[type="number"] { width: 60px; }
+
+        /* 预览区 */
+        .viewport { flex: 1; position: relative; background: #000; background-image: 
+            linear-gradient(45deg, #111 25%, transparent 25%), linear-gradient(-45deg, #111 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #111 75%), linear-gradient(-45deg, transparent 75%, #111 75%);
+            background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            display: flex; align-items: center; justify-content: center; overflow: auto; }
+
+        .canvas-container { position: relative; border: 2px solid #555; background: #000; overflow: hidden; cursor: grab; user-select: none; }
+        .canvas-container:active { cursor: grabbing; }
+        .spec-guide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px dashed #0f0; pointer-events: none; z-index: 10; opacity: 0.5; }
+        
+        .img-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; pointer-events: none; }
+        .img-layer img { display: block; image-rendering: pixelated; }
+        .pad-box { width: 100%; flex-shrink: 0; }
+
+        /* 差值模式模式样式 */
+        .diff-mode #layerB { 
+            mix-blend-mode: difference; 
+            opacity: 1 !important; 
+            filter: brightness(0) invert(1);
+        }
+        .diff-mode #layerA {
+            filter: brightness(0) invert(1);
+        }
+        .diff-mode .canvas-container {
+            background: #000;
+        }
+
+        /* 实时结果模拟区 */
+        .preview-sim { margin-top: 15px; border: 1px solid #444; background: #111; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+        .sim-label { position: absolute; top: 5px; left: 5px; font-size: 10px; color: #666; pointer-events: none; }
+        .sim-btn { position: relative; }
+        .sim-btn .sim-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; }
+        .sim-btn .sim-layer img { display: block; image-rendering: pixelated; margin: 0 auto; }
+
+        /* 按钮样式 */
+        button { background: #0078d4; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background 0.2s; }
+        button:hover { background: #0086f1; }
+        button.secondary { background: #444; }
+        button.secondary:hover { background: #555; }
+        button.active { background: #28a745; }
+        button.active:hover { background: #218838; }
+        
+        .download-row { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+
+        .pixel-info { position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.8); padding: 10px; border-radius: 5px; font-family: monospace; font-size: 12px; color: #0f0; pointer-events: none; }
+        
+        .adj-btn-group { display: flex; gap: 5px; margin-top: 5px; }
+        .adj-btn-group button { flex: 1; padding: 4px; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>UI 像素对齐工具</h2>
+
+    <div class="section">
+        <span class="section-title">1. 设置目标规格 (Prefab Size)</span>
+        <div class="input-group">
+            <label>预设规格</label>
+            <select id="preset">
+                <option value="277,222">Exit (277x222)</option>
+                <option value="498,339">LoadGame (498x339)</option>
+                <option value="437,326">NewGame (437x326)</option>
+                <option value="384,299">WitchBook (384x299)</option>
+                <option value="253,169">WitchBookSmall (253x169)</option>
+                <option value="362,267">Gallery (362x267)</option>
+                <option value="338,252">Options (338x252)</option>
+                <option value="116,89">Options (116x89)</option>
+                <option value="1300,220">Options (1300x220)</option>
+            </select>
+        </div>
+        <div style="display:flex; gap:10px">
+            <div style="flex:1">
+                <label>宽度 (W)</label>
+                <input type="number" id="specW" value="277">
+            </div>
+            <div style="flex:1">
+                <label>高度 (H)</label>
+                <input type="number" id="specH" value="222">
+            </div>
+        </div>
+        <div class="input-group" style="margin-top: 15px;">
+            <label>预览缩放 (Zoom: <span id="zoomVal">100</span>%)</label>
+            <div class="padding-ctrl">
+                <input type="range" id="zoomRange" min="50" max="800" step="10" value="100">
+                <button class="secondary" onclick="resetView()" style="padding: 2px 8px;">重置视图</button>
+            </div>
+            <div style="font-size: 11px; color: #777; margin-top: 5px;">* 在右侧预览区按住鼠标左键可拖拽视图</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="section-title">2. 上传素材</span>
+        <div class="input-group">
+            <label>图片 A (Normal 状态)</label>
+            <input type="file" id="fileA" accept="image/*">
+        </div>
+        <div class="input-group">
+            <label>图片 B (Highlighted 状态)</label>
+            <input type="file" id="fileB" accept="image/*">
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="section-title">3. 图 A 精确平移 (移动 A 对齐 B)</span>
+        
+        <label>显示模式</label>
+        <button id="toggleDiff" style="width: 100%; margin-bottom: 10px;" class="secondary">开启黑白差值视图 (对齐利器)</button>
+
+        <label>图 A 顶部留白 (垂直)</label>
+        <div class="padding-ctrl">
+            <input type="range" id="rangeAT" min="-150" max="150" value="0">
+            <input type="number" id="numAT" value="0">
+        </div>
+        <div class="adj-btn-group">
+            <button class="secondary" onclick="adjustPadding('AT', -1)">↑ 向上 1px</button>
+            <button class="secondary" onclick="adjustPadding('AT', 1)">↓ 向下 1px</button>
+        </div>
+
+        <label style="margin-top:10px">图 A 左侧留白 (水平)</label>
+        <div class="padding-ctrl">
+            <input type="range" id="rangeAL" min="-300" max="300" value="0">
+            <input type="number" id="numAL" value="0">
+        </div>
+        <div class="adj-btn-group">
+            <button class="secondary" onclick="adjustPadding('AL', -1)">← 向左 1px</button>
+            <button class="secondary" onclick="adjustPadding('AL', 1)">→ 向右 1px</button>
+        </div>
+
+        <label style="margin-top:10px">图 A 右侧留白 (水平 - 影响对齐)</label>
+        <div class="padding-ctrl">
+            <input type="range" id="rangeAR" min="-300" max="300" value="0">
+            <input type="number" id="numAR" value="0">
+        </div>
+        <div class="adj-btn-group">
+            <button class="secondary" onclick="adjustPadding('AR', 1)">← 增加右留白 (左移) 1px</button>
+            <button class="secondary" onclick="adjustPadding('AR', -1)">→ 减少右留白 (右移) 1px</button>
+        </div>
+        
+        <label style="margin-top:15px">图 B 顶部留白 (垂直固定)</label>
+        <div class="padding-ctrl">
+            <input type="range" id="rangeBT" min="-150" max="150" value="0">
+            <input type="number" id="numBT" value="0">
+        </div>
+
+        <label style="margin-top:10px">图 B 左侧留白 (水平固定)</label>
+        <div class="padding-ctrl">
+            <input type="range" id="rangeBL" min="-300" max="300" value="0">
+            <input type="number" id="numBL" value="0">
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="section-title">4. 导出</span>
+        <div class="download-row">
+            <button id="dlA">下载修复版 A (Normal)</button>
+            <button id="dlB">下载修复版 B (Highlighted)</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="section-title">实时交互预览 (鼠标移入)</span>
+        <div class="preview-sim" id="simArea">
+            <span class="sim-label">Hover 切换效果</span>
+            <div class="sim-btn" id="simBtn"></div>
+        </div>
+    </div>
+</div>
+
+<div class="viewport">
+    <div class="canvas-container" id="container">
+        <div class="spec-guide"></div>
+        <!-- 图 A 层 -->
+        <div id="layerA" class="img-layer" style="z-index: 1;">
+            <img id="imgA">
+        </div>
+        <!-- 图 B 层 -->
+        <div id="layerB" class="img-layer" style="z-index: 2; opacity: 0.5;">
+            <img id="imgB">
+        </div>
+    </div>
+    
+    <div class="pixel-info" id="statusInfo">请上传图片。在差值模式下，白色表示不重合/偏移的部分，黑色表示完全重合。</div>
+</div>
+
+<canvas id="exportCanvas" style="display:none"></canvas>
+
+<script>
+    const state = {
+        w: 277, h: 222,
+        padAT: 0, padBT: 0,
+        padAL: 0, padAR: 0, padBL: 0,
+        zoom: 1,
+        panX: 0, panY: 0,
+        isHover: false,
+        diffMode: false,
+        isDragging: false,
+        dragStart: { x: 0, y: 0 }
+    };
+
+    const els = {
+        specW: document.getElementById('specW'),
+        specH: document.getElementById('specH'),
+        zoomRange: document.getElementById('zoomRange'),
+        zoomVal: document.getElementById('zoomVal'),
+        viewport: document.querySelector('.viewport'),
+        container: document.getElementById('container'),
+        imgA: document.getElementById('imgA'),
+        imgB: document.getElementById('imgB'),
+        layerA: document.getElementById('layerA'),
+        layerB: document.getElementById('layerB'),
+        numAT: document.getElementById('numAT'),
+        rangeAT: document.getElementById('rangeAT'),
+        numAL: document.getElementById('numAL'),
+        rangeAL: document.getElementById('rangeAL'),
+        numAR: document.getElementById('numAR'),
+        rangeAR: document.getElementById('rangeAR'),
+        numBT: document.getElementById('numBT'),
+        rangeBT: document.getElementById('rangeBT'),
+        numBL: document.getElementById('numBL'),
+        rangeBL: document.getElementById('rangeBL'),
+        statusInfo: document.getElementById('statusInfo'),
+        simArea: document.getElementById('simArea'),
+        simBtn: document.getElementById('simBtn'),
+        toggleDiff: document.getElementById('toggleDiff')
+    };
+
+    function updateStatus() {
+        const info = state.diffMode ? 
+            `差值模式: A(${state.padAL},${state.padAT}) B(${state.padBL},${state.padBT})` :
+            `常规模式: A(${state.padAL},${state.padAT}) B(${state.padBL},${state.padBT})`;
+        els.statusInfo.innerText = info;
+    }
+
+    function updateLayout() {
+        state.w = parseInt(els.specW.value) || 0;
+        state.h = parseInt(els.specH.value) || 0;
+        
+        els.container.style.width = state.w + 'px';
+        els.container.style.height = state.h + 'px';
+        els.container.style.transform = `translate(${state.panX}px, ${state.panY}px) scale(${state.zoom})`;
+
+        state.padAT = parseInt(els.numAT.value) || 0;
+        state.padAL = parseInt(els.numAL.value) || 0;
+        state.padAR = parseInt(els.numAR.value) || 0;
+        
+        // 渲染逻辑：如果设置了右侧留白且左侧为0，则尝试右对齐
+        // 但为了简单对齐，我们直接将 padAR 转换为负的 marginLeft 偏移的一部分，或者直接应用到 style
+        // 这里采用更直观的方式：layerA 设为 flex 布局，利用 padding
+        els.layerA.style.display = 'flex';
+        els.layerA.style.flexDirection = 'column';
+        els.layerA.style.alignItems = state.padAR !== 0 && state.padAL === 0 ? 'flex-end' : 'flex-start';
+        
+        els.imgA.style.marginTop = state.padAT + 'px';
+        els.imgA.style.marginLeft = state.padAL + 'px';
+        els.imgA.style.marginRight = state.padAR + 'px';
+
+        state.padBT = parseInt(els.numBT.value) || 0;
+        state.padBL = parseInt(els.numBL.value) || 0;
+        els.imgB.style.marginTop = state.padBT + 'px';
+        els.imgB.style.marginLeft = state.padBL + 'px';
+
+        if (!state.diffMode) {
+            els.layerB.style.opacity = 0.5;
+            els.layerB.style.filter = "hue-rotate(90deg)"; // 正常预览用紫色区分
+        } else {
+            els.layerB.style.filter = "grayscale(1)";
+        }
+
+        updateSimulation();
+        updateStatus();
+    }
+
+    function updateSimulation() {
+        els.simArea.style.height = (state.h + 40) + 'px';
+        els.simBtn.style.width = state.w + 'px';
+        els.simBtn.style.height = state.h + 'px';
+        els.simBtn.innerHTML = '';
+        
+        const wrapA = document.createElement('div');
+        wrapA.className = 'sim-layer';
+        wrapA.style.display = 'flex';
+        wrapA.style.flexDirection = 'column';
+        wrapA.style.alignItems = state.padAR !== 0 && state.padAL === 0 ? 'flex-end' : 'flex-start';
+        const cloneA = els.imgA.cloneNode();
+        cloneA.style.marginTop = state.padAT + 'px';
+        cloneA.style.marginLeft = state.padAL + 'px';
+        cloneA.style.marginRight = state.padAR + 'px';
+        wrapA.appendChild(cloneA);
+        wrapA.style.opacity = state.isHover ? 0 : 1;
+        
+        const wrapB = document.createElement('div');
+        wrapB.className = 'sim-layer';
+        const cloneB = els.imgB.cloneNode();
+        cloneB.style.marginTop = state.padBT + 'px';
+        cloneB.style.marginLeft = state.padBL + 'px';
+        wrapB.appendChild(cloneB);
+        wrapB.style.opacity = state.isHover ? 1 : 0;
+        
+        els.simBtn.appendChild(wrapA);
+        els.simBtn.appendChild(wrapB);
+    }
+
+    els.simArea.onmouseenter = () => { state.isHover = true; updateSimulation(); };
+    els.simArea.onmouseleave = () => { state.isHover = false; updateSimulation(); };
+
+    els.toggleDiff.onclick = () => {
+        state.diffMode = !state.diffMode;
+        document.body.classList.toggle('diff-mode', state.diffMode);
+        els.toggleDiff.innerText = state.diffMode ? "关闭差值模式" : "开启黑白差值视图 (对齐利器)";
+        els.toggleDiff.className = state.diffMode ? "active" : "secondary";
+        updateLayout();
+    };
+
+    function handleFile(input, targetImg) {
+        input.onchange = e => {
+            const file = e.target.files[0];
+            if(!file) return;
+            const reader = new FileReader();
+            reader.onload = res => {
+                targetImg.src = res.target.result;
+                targetImg.onload = () => updateLayout();
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+    handleFile(document.getElementById('fileA'), els.imgA);
+    handleFile(document.getElementById('fileB'), els.imgB);
+
+    function bindCtrl(range, num) {
+        range.oninput = () => { num.value = range.value; updateLayout(); };
+        num.oninput = () => { range.value = num.value; updateLayout(); };
+    }
+    bindCtrl(els.rangeAT, els.numAT);
+    bindCtrl(els.rangeAL, els.numAL);
+    bindCtrl(els.rangeAR, els.numAR);
+    bindCtrl(els.rangeBT, els.numBT);
+    bindCtrl(els.rangeBL, els.numBL);
+
+    els.specW.oninput = updateLayout;
+    els.specH.oninput = updateLayout;
+
+    els.zoomRange.oninput = () => {
+        state.zoom = parseInt(els.zoomRange.value) / 100;
+        els.zoomVal.innerText = els.zoomRange.value;
+        updateLayout();
+    };
+
+    window.resetView = () => {
+        els.zoomRange.value = 100;
+        state.zoom = 1;
+        state.panX = 0;
+        state.panY = 0;
+        els.zoomVal.innerText = 100;
+        updateLayout();
+    };
+
+    // 拖拽逻辑
+    els.container.addEventListener('mousedown', e => {
+        if (e.button !== 0) return;
+        state.isDragging = true;
+        state.dragStart = { x: e.clientX - state.panX, y: e.clientY - state.panY };
+    });
+
+    window.addEventListener('mousemove', e => {
+        if (!state.isDragging) return;
+        state.panX = e.clientX - state.dragStart.x;
+        state.panY = e.clientY - state.dragStart.y;
+        updateLayout();
+    });
+
+    window.addEventListener('mouseup', () => {
+        state.isDragging = false;
+    });
+
+    window.adjustPadding = function(target, amount) {
+        let numEl, rangeEl;
+        if (target === 'AT') { numEl = els.numAT; rangeEl = els.rangeAT; }
+        else if (target === 'AL') { numEl = els.numAL; rangeEl = els.rangeAL; }
+        else if (target === 'AR') { numEl = els.numAR; rangeEl = els.rangeAR; }
+        else if (target === 'BT') { numEl = els.numBT; rangeEl = els.rangeBT; }
+        else if (target === 'BL') { numEl = els.numBL; rangeEl = els.rangeBL; }
+        
+        let val = (parseInt(numEl.value) || 0) + amount;
+        numEl.value = val;
+        rangeEl.value = val;
+        updateLayout();
+    };
+
+    document.getElementById('preset').onchange = e => {
+        const [w, h] = e.target.value.split(',');
+        els.specW.value = w;
+        els.specH.value = h;
+        updateLayout();
+    };
+
+    function download(img, padTop, padLeft, padRight, name) {
+        if(!img.src) return alert('请先上传图片');
+        const canvas = document.getElementById('exportCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = state.w;
+        canvas.height = state.h;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        let drawX = padLeft;
+        if (padRight !== 0 && padLeft === 0) {
+            drawX = state.w - img.naturalWidth - padRight;
+        }
+        
+        ctx.drawImage(img, drawX, padTop);
+        const link = document.createElement('a');
+        link.download = name;
+        link.href = canvas.toDataURL();
+        link.click();
+    }
+
+    document.getElementById('dlA').onclick = () => download(els.imgA, state.padAT, state.padAL, state.padAR, 'Button_Normal_Fixed.png');
+    document.getElementById('dlB').onclick = () => download(els.imgB, state.padBT, state.padBL, 0, 'Button_Highlighted_Fixed.png');
+
+    updateLayout();
+</script>
+
+</body>
+</html>

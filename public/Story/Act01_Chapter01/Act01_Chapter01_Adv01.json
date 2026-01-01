@@ -1,0 +1,181 @@
+{
+  "id": "act01_chapter01_adv01",
+  "type": "traditional",
+  "lines": [
+    {
+      "type": "label",
+      "name": "Scene1-0-1"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_140_001.png",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 1.2
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.8
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Ambi_11_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "——这里是囚牢。"
+    },
+    {
+      "type": "text",
+      "text": "樱羽艾玛只想捂紧耳朵，\n抵挡身边涌现的恶意。"
+    },
+    {
+      "type": "text",
+      "text": "可是，她被无形的锁链束缚着，\n就像个囚犯一样，连捂紧耳朵也做不到。"
+    },
+    {
+      "type": "text",
+      "text": "有时被锁在厕所隔间里。"
+    },
+    {
+      "type": "text",
+      "text": "有时课本被撕毁丢弃。"
+    },
+    {
+      "type": "text",
+      "text": "有时室内鞋里被塞满了虫。"
+    },
+    {
+      "type": "text",
+      "text": "有时被集体暴打施以私刑。"
+    },
+    {
+      "type": "text",
+      "text": "有时被绑起来当众羞辱。"
+    },
+    {
+      "type": "text",
+      "text": "有时。有时。有时——"
+    },
+    {
+      "type": "text",
+      "text": "霸凌日益变本加厉，\n她的心脏好似灌铅般愈发沉重。"
+    },
+    {
+      "type": "text",
+      "text": "住手吧。\n住手。住手。住手住手住手。"
+    },
+    {
+      "type": "text",
+      "text": "不要再欺负人了！！"
+    },
+    {
+      "type": "text",
+      "text": "唯有这句话不管怎样都说不出口。"
+    },
+    {
+      "type": "text",
+      "text": "被辱骂、被欺侮、被嘲笑，\n每日如此，不见尽头。"
+    },
+    {
+      "type": "text",
+      "text": "如此残酷的行为，竟长期持续，未曾断绝。"
+    },
+    {
+      "type": "text",
+      "text": "她不禁开始责备比任何人都胆小的自己。\n她太过讨厌自己，甚至想要就此消失。"
+    },
+    {
+      "type": "text",
+      "text": "对一成不变的日常感到绝望的艾玛，\n堕入了无边的黑暗之中。"
+    },
+    {
+      "type": "text",
+      "text": "周围的少女们，不断地发出欢声笑语。"
+    },
+    {
+      "type": "text",
+      "text": "不想被讨厌，不想被讨厌啊。\n为什么要这样？可不可以不要这样。"
+    },
+    {
+      "type": "text",
+      "text": "心在持续发出沙哑的呜咽。"
+    },
+    {
+      "type": "text",
+      "text": "长期以来，艾玛一直在责备着自己——"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "SolidColor",
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 0
+      }
+    },
+    {
+      "type": "text",
+      "text": "但某天她忽然发现了答案。"
+    },
+    {
+      "type": "text",
+      "text": "啊，对了——"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_140_002.png",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 1.2
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.8
+      }
+    },
+    {
+      "type": "text",
+      "text": "大家都去死就好了。"
+    },
+    {
+      "type": "command",
+      "command": "goto",
+      "params": {
+        "scene": "Act01_Chapter01/Act01_Chapter01_Adv02",
+        "soft": true
+      }
+    }
+  ]
+}

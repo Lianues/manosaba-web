@@ -1,0 +1,3498 @@
+{
+  "id": "Act01_Chapter01_Adv04",
+  "type": "traditional",
+  "lines": [
+    {
+      "type": "label",
+      "name": "Scene1-0-4"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_004_001.png",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 0.99
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.9
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_26_1"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "哇……好大。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "原来，\n关押着艾玛她们的牢房位于地下。"
+    },
+    {
+      "type": "text",
+      "text": "登上长长的楼梯，迎面而来的是\n充满豪华洋宅气息的，宽阔的玄关大厅。"
+    },
+    {
+      "type": "text",
+      "text": "长长的过道望不见尽头，过道上的门也数不清到底有几扇。\n连结上层的大楼梯十分地长，脖子往上扭得生疼才能望到顶。"
+    },
+    {
+      "type": "text",
+      "text": "建筑物内许多地方都相当地破旧，营造出\n令人汗毛直竖的气氛。总而言之，这里大得出奇。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "SolidColor",
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 0.9
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.5
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 0.99
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.9
+      }
+    },
+    {
+      "type": "text",
+      "text": "看守进入了附近的房间内，\n艾玛也跟着走了进去。"
+    },
+    {
+      "type": "text",
+      "text": "这里应该就是会客厅了。"
+    },
+    {
+      "type": "text",
+      "text": "和冷冰冰的，充满压迫感的地下不同，\n这里是个气派华丽，却透着一股邪气的空间。"
+    },
+    {
+      "type": "text",
+      "text": "高高的天花板悬挂着吊灯，\n地上铺着一层老旧的绒毯。房内还配备着沙发和暖炉。"
+    },
+    {
+      "type": "text",
+      "text": "装饰在室内的物品相当恶趣味。\n其中，有样东西吸住了艾玛的眼球——"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "这东西，是真的……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.9
+      }
+    },
+    {
+      "type": "text",
+      "text": "墙上挂着一把巨大的弩枪。\n夸张的尺寸侵占着视野，令艾玛脊背发凉。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.9
+      }
+    },
+    {
+      "type": "text",
+      "text": "门外站着一位黑衣看守，\n正把守连结过道的出入口。"
+    },
+    {
+      "type": "text",
+      "text": "既然入口已被封锁，\n看样子，所有人都已经到齐了。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "text",
+      "text": "宽阔的会客厅内，共有13位少女\n聚集在此。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "AnAn",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 30,
+        "posY": 30,
+        "appearance": [
+          "Normal1",
+          "Angle01"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "…………",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "有正蜷缩在房间的一角处，\n看着像“社恐”的少女。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Noah",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 70,
+        "posY": 30,
+        "appearance": [
+          "Smile1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "哼哼哼～哼♪",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "有一边哼着曲子，一边随心所欲地\n改变着室内的布局的，自由散漫的少女。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Alisa",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 30,
+        "posY": 30,
+        "appearance": [
+          "Angry1",
+          "Option-ArmL-Off"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "开什么玩笑！我要杀了你！",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "有正毫无意义地发泄着怒气的\n戴着口罩的太妹。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Coco",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 70,
+        "posY": 30,
+        "appearance": [
+          "Angry1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "不觉得这里很臭吗？",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "有露骨地表达着嫌弃，并用手捏着鼻子的猫耳少女。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Miria",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 30,
+        "posY": 30,
+        "appearance": [
+          "Pensive1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "……哎呀呀。",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "有满脸倦怠地叹着气，露出度颇高的少女。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Margo",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 70,
+        "posY": 30,
+        "appearance": [
+          "Smile1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "呵呵呵。",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "还有像旁观者般露出笑容的，散发妖冶气氛的少女。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "另外还有一位少女，在墙边观察着众人。"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Nanoka",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Default"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "…………",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "——她的眼神，十分地，十分地灰暗。"
+    },
+    {
+      "type": "text",
+      "text": "她身上最吸人眼球的，\n便是她背着的那把巨大的，不知真假的枪支。"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Sherry",
+        "subId": "Middle",
+        "scale": 1,
+        "posX": 50,
+        "appearance": [
+          "Smile1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "哎呀～真是厉害啊～",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown008.ogg"
+    },
+    {
+      "type": "text",
+      "text": "这时，水蓝色头发的少女大声说道。\n她的脸上挂着和现场气氛格格不入的，明亮而开心的笑容。"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_11_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "突然在牢房里醒来！还被怪物监视着！",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown009.ogg"
+    },
+    {
+      "type": "text",
+      "text": "感觉发生了很厉害的事情！\n真让人兴奋耶～！",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown010.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Smile1"
+        ],
+        "position": 40
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1"
+        ],
+        "position": 60
+      }
+    },
+    {
+      "type": "text",
+      "text": "欸，嗯……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Smile1",
+          "ArmR11",
+          "ArmL10"
+        ],
+        "position": 40
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR6",
+          "ArmL6"
+        ],
+        "position": 60
+      }
+    },
+    {
+      "type": "text",
+      "text": "眼中闪着好奇的水蓝色头发少女\n忽然握住了艾玛双手——"
+    },
+    {
+      "type": "command",
+      "command": "emoteJumpDouble",
+      "params": {
+        "id": "Sherry,Ema",
+        "subId": null
+      }
+    },
+    {
+      "type": "text",
+      "text": "然后用力地上下摇动。\n她好像有些用力过度，害艾玛疼得不禁眯了眯眼睛。"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Angry1",
+          "ArmL2"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "“真让人兴奋耶～”，兴奋个头啦！",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown011.ogg"
+    },
+    {
+      "type": "text",
+      "text": "这是很严重的事情好吗！\n拜托有一点危机感好不好！？",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown012.ogg"
+    },
+    {
+      "type": "text",
+      "text": "这位插嘴少女的声音，\n就是刚才在牢房那边听到过的尖尖的说话声。"
+    },
+    {
+      "type": "text",
+      "text": "她身材小巧，像娃娃一样可爱，\n就是总感觉说话的口吻有些不太自然。"
+    },
+    {
+      "type": "text",
+      "text": "室内有许多名少女，\n而在这当中，不知是哪一位“噗”地发出了笑声。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Flushed1",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "紧接着，小巧少女的脸\n一下子涨得红彤彤的。"
+    },
+    {
+      "type": "text",
+      "text": "刚刚是谁在笑哇！？",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown013.ogg"
+    },
+    {
+      "type": "text",
+      "text": "——啊，不好意思。\n就是感觉你的说话口吻有些怪。",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown014.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Smile1",
+          "ArmR3",
+          "ArmL2"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "一位外貌中性的少女\n往前踏出一步。"
+    },
+    {
+      "type": "text",
+      "text": "她身材高挑，\n透出一股宛如骑士一般的飒爽英气。"
+    },
+    {
+      "type": "text",
+      "text": "正所谓锦上添花，\n她的腰间还佩了一把刺剑，更衬托她的风采。"
+    },
+    {
+      "type": "text",
+      "text": "她的超凡气质似乎震撼了大家，\n每个人都不禁屏住呼吸，目不转睛地看着她。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Smile1",
+          "ArmR3",
+          "ArmL3"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "大家应该都是初次见面吧。\n可以的话，能做个自我介绍吗？",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Unknown015.ogg"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Leia",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Smile1",
+          "ArmR3",
+          "ArmL3"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "我来带头吧。\n我的名字叫莲见蕾雅。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Hanna",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Angry1",
+          "ArmL2"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "……呵，我是远野汉娜。\n往后请多多指照……往后请多多关教？",
+      "speaker": "远野汉娜",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hanna001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Angry1",
+          "ArmL2"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Smile1",
+          "ArmR5",
+          "ArmL1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "text",
+      "text": "能先让我讲话吗？\n你的名字叫蕾雅对不对。\n一上来就笑话别人，也太失礼了吧？",
+      "speaker": "远野汉娜",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hanna002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "呃，抱歉。我没想到你这么介意。\n求你大人有大量，原谅我吧。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Flushed1",
+          "ArmL1"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "我、我也没在意啦……",
+      "speaker": "远野汉娜",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hanna003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "你的说话口吻，是你爸妈教的对吗？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "不要再吐槽了啦！\n你别管我了～～！！就这样！！",
+      "speaker": "远野汉娜",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hanna004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "她的手握成拳头，不停地在颤抖。\n看来她的自尊相当受伤。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "现场气氛因尴尬降至了冰点。\n这时，有一位不识气氛的少女充满干劲地举起手来。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Sherry",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1",
+          "ArmL6",
+          "ArmR1"
+        ]
+      }
+    },
+    {
+      "type": "command",
+      "command": "emoteJumpDouble",
+      "params": {
+        "id": "Sherry",
+        "subId": "Middle"
+      }
+    },
+    {
+      "type": "text",
+      "text": "嗨嗨～！我叫橘雪莉。\n哪里有案件哪里就有我！\n一切就交给我这位名侦探吧！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "名侦探？？你？？",
+      "speaker": "远野汉娜",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hanna005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Smile1",
+          "ArmR1",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "对哟！咳咳！\n因为我可是悬疑迷！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR5"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "请问你有实际解决过什么案件吗？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia004.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "那还没有哦！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Pensive1",
+          "ArmR8"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "……是，是吗。我感觉有点头痛了……\n还是有请下一位吧。你能告诉我名字吗？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR6",
+          "ArmL6"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "被喊住的艾玛“唰”地一下摆正了姿势。"
+    },
+    {
+      "type": "text",
+      "text": "（开、开头是最重要的……！\n 我的第一印象就靠自我介绍决定了，要打起精神……！）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema004.ogg"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Ema",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1",
+          "ArmR1",
+          "ArmL16"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "我、我是，樱羽艾玛！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR1",
+          "ArmL1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Meruru",
+        "appearance": [
+          "Default"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "在报上名的同时，\n有位少女慌张地跑来艾玛身旁。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Meruru",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Default"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "我我我、我的名字是、冰、冰、冰……\n冰上、梅露露……",
+      "speaker": "冰上梅露露",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Meruru001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Meruru",
+        "appearance": [
+          "Default"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "我、我说，艾玛小姐，\n那、那个，那个那个那个……\n你、你、你……",
+      "speaker": "冰上梅露露",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Meruru002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "欸，呃，有什么事吗？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "你，好像受伤了……",
+      "speaker": "冰上梅露露",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Meruru003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "虽然有些磕磕绊绊，\n但梅露露总算把话讲完了。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛低头看着自己的膝盖，\n才发现上面正流着血。"
+    },
+    {
+      "type": "text",
+      "text": "（是刚刚被希罗推倒的时候受的伤……）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "不算什么问题啦，没事的！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema008.ogg"
+    },
+    {
+      "type": "text",
+      "text": "这，当然有问题了……",
+      "speaker": "冰上梅露露",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Meruru004.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Meruru",
+        "appearance": [
+          "Default"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Meruru",
+        "props": {
+          "posY": 30
+        },
+        "duration": 1.2
+      }
+    },
+    {
+      "type": "text",
+      "text": "梅露露露出一副差点要哭出来的表情。\n接着，她单膝跪地，把手放在了艾玛的膝盖上面。"
+    },
+    {
+      "type": "text",
+      "text": "——然后，接下来发生的事情令艾玛吃了一惊。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "text",
+      "text": "欸……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema009.ogg"
+    },
+    {
+      "type": "text",
+      "text": "梅露露的掌心发出光芒，\n而艾玛膝上的伤口正肉眼可见地愈合。"
+    },
+    {
+      "type": "text",
+      "text": "在场所有人直到上一刻还在互相打量提防着他人，\n下一刻就都把目光齐刷刷聚集在了她展现出的神奇力量上。"
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Meruru",
+        "props": {
+          "posY": 50
+        },
+        "duration": 1.2
+      }
+    },
+    {
+      "type": "text",
+      "text": "你痛不痛？没事吧？",
+      "speaker": "冰上梅露露",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Meruru005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "谢、谢谢你。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema010.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Meruru",
+        "appearance": [
+          "Default"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "梅露露讲话时扭捏地望着地面，\n并没有对上艾玛的眼睛。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR9"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "蕾雅清了清嗓子，准备重新回到刚才的话题。"
+    },
+    {
+      "type": "text",
+      "text": "……虽然很想问这道神奇力量是什么情况，\n但是其他人还没介绍完，\n我觉得还是先继续自我介绍吧。下一个。你可以自我介绍下吗？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia006.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Coco",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "啊，轮到我了？\n我的名字是泽渡可可。",
+      "speaker": "泽渡可可",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Coco001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我说，我能问你几个问题吗？\n我好像在电视上见到过你。",
+      "speaker": "泽渡可可",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Coco002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Coco",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "自称可可的少女\n走近蕾雅身旁，向她投去毫无顾忌的视线。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Surprised1",
+          "ArmR7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "哦，对，我也想起来了！\n你是有名人对吧！？",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry004.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Pensive1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "听你们一讲……我好像也见过。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema011.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_200_003.png",
+        "duration": 0
+      }
+    },
+    {
+      "type": "text",
+      "text": "（记得是活跃在舞台剧、电视节目、电影领域的女演员……\n 而且身材长相都超级好的……难道真的是本人？）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema012.ogg"
+    },
+    {
+      "type": "text",
+      "text": "因为我有所属的艺能事务所，平时工作还是很多的。\n最常接的就是舞台剧，不过电视节目也经常参演。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "真是你！好厉害，我还是第一次亲眼见到艺人耶。\n请你给我签名！！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "喂，你好碍事！是我先发现她的！\n我在网上有做主播，总之来和我开联动台吧！！",
+      "speaker": "泽渡可可",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Coco003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "Stills"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Smile1",
+          "ArmR9"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "呵呵，自我介绍还没结束呢，这事就以后再说吧。\n各位，可以继续下一个吗？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia008.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "蕾雅似乎已经习惯这样的场面。\n她自然地躲开了话题，催促其他少女继续自我介绍。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Miria",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Flushed1",
+          "ArmR9",
+          "ArmL4"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "呃……好尴尬……我是佐伯米莉亚哦？\n请多多关照～啊哈哈～……唉。",
+      "speaker": "佐伯米莉亚",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Miria001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Margo",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Smile1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "我是宝生玛格。\n这里好多可爱的小朋友，害我忍不住舔嘴巴了，呵呵。",
+      "speaker": "宝生玛格",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Margo001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Alisa",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1",
+          "Option-ArmL-Off"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "啧……紫藤亚里沙。\n我可没兴趣跟你们搞好关系。",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Alisa001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "自称亚里沙的少女戴着口罩，\n看不到脸。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Alisa",
+        "appearance": [
+          "Angry1",
+          "Option-ArmL-Off"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Smile1",
+          "ArmR1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "text",
+      "text": "你叫亚里沙，对吗。\n为什么戴口罩？被人看到脸会很不好吗？",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "你好烦，跟你没关系吧。",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Alisa002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "哎呀，我超好奇！\n名侦探的血都沸腾起来了！",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "再跟我扯有的没的我就揍你！！",
+      "speaker": "紫藤亚里沙",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Alisa003.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR4",
+          "ArmL6"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "你们不要吵了！",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia009.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我知道你现在对雪莉很不满，\n但是我们现在更需要互相了解。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia010.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Normal1",
+          "ArmL11"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "你刚是不是不经意间在鄙视我？",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry008.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Smile1",
+          "ArmR3",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "没有这个意思，不过我的确希望你能安静一点。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia011.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Smile1",
+          "ArmR7",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "欸嘿☆我知道了～",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry009.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1",
+          "ArmR3",
+          "ArmL1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "呃，剩下还有……",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia012.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "AnAn",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1",
+          "Angle01"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "在墙边像乌龟一样缩成一团的少女\n忽然间拿出了素描本。"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "AnAn",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1",
+          "Arms2",
+          "Angle01"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "不知是因为不能说话，还是有别的什么原因，\n她把话写在了素描本上，然后拿起来给大家看。"
+    },
+    {
+      "type": "text",
+      "text": "『吾辈是夏目安安。\n 今后，请各位不要找吾辈说话』",
+      "speaker": "夏目安安",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_AnAn001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Nanoka",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Default"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "……黑部奈叶香。",
+      "speaker": "黑部奈叶香",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Nanoka001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Hiro",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "我的名字是二阶堂希罗。",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "（希罗……）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema013.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Noah",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "差不多所有人的自我介绍都结束了，\n但，还有一位少女完全没参与话题。"
+    },
+    {
+      "type": "text",
+      "text": "就是那位一直在擅自更改室内布局，\n摆弄室内物品的少女。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "不好意思，好像就剩你还没自我介绍了。\n能告诉我你的名字吗？",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia013.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "scale": 2,
+        "rotZ": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "blur",
+      "params": {
+        "target": "MainBackground-Middle",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Noah",
+        "subId": "Middle",
+        "scale": 1.25,
+        "posX": 50,
+        "posY": 30,
+        "appearance": [
+          "Normal1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "嗯～？名字？诺亚就是诺亚哦？\n嗯，城崎诺亚。",
+      "speaker": "城崎诺亚",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Noah001.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "text",
+      "text": "自称诺亚的少女\n马上又继续摆弄着室内的物品。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Leia",
+        "appearance": [
+          "Smile1",
+          "ArmR9",
+          "ArmL3"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "这下至少知道该怎么称呼各位了，真是太好了。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia014.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我也不知道，我们来到这里到底有什么意义。\n但是，我想我们应该冷静行动。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia015.ogg"
+    },
+    {
+      "type": "text",
+      "text": "总之我们不要吵闹，\n静下心来等待说明，好吗。",
+      "speaker": "莲见蕾雅",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Leia016.ogg"
+    },
+    {
+      "type": "text",
+      "text": "蕾雅话音刚落——"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_008.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "那只怪物猫头鹰从天花板处的通风口飞了过来。\n少女们的视线集中在它身上。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_10_1"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_500_001.png",
+        "subId": "Middle",
+        "posX": 50,
+        "posY": 50,
+        "rotZ": 0,
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.8
+      }
+    },
+    {
+      "type": "text",
+      "text": "啊……好多人……\n呃，我再重新自我介绍下……\n我是受命管理这座宅邸的可爱猫头鹰，典狱长……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "（是刚刚在电视上看到的猫头鹰……！）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema014.ogg"
+    },
+    {
+      "type": "text",
+      "text": "……因为下班时间快到了……\n我就抓紧时间开始说明咯……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "嗯……非常遗憾地告诉大家……\n各位的身上拥有成为【魔女】的因子。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "现场瞬时嘈杂起来，不安的气氛正在蔓延。"
+    },
+    {
+      "type": "text",
+      "text": "（魔女……？魔女，是什么……？）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema015.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛不知所措地摇了摇头。"
+    },
+    {
+      "type": "text",
+      "text": "魔女不过是存在于\n动画、漫画或者电影里的虚构形象。"
+    },
+    {
+      "type": "text",
+      "text": "此时却忽然有人宣布，这是真实存在的，\n像她们一样的普通人，自然没法全盘接受。"
+    },
+    {
+      "type": "text",
+      "text": "用上层大人物的话来讲，\n【魔女】是给这个国家带来灾难的邪恶化身。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "而经我国法律规定的全国性检查，\n从在场各位身上均明显检测到了魔女的因子。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "因此，国家判断你们相当危险，\n决定将各位收容至这座监牢内。情况就是这样。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "因为各位都有化为【魔女】的可能性，\n我们绝不能坐视不管……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden007.ogg"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_500_001.png",
+        "posX": 50,
+        "posY": 60,
+        "scale": 1.5,
+        "rotZ": 0,
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "Stills-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.8
+      }
+    },
+    {
+      "type": "text",
+      "text": "所以呢，请大家明白……\n对于这个世界，你们就是有害的坏人。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden008.ogg"
+    },
+    {
+      "type": "text",
+      "text": "哈！？搞什么，你好恶心！！\n我不记得我做过那种检查欸～？",
+      "speaker": "泽渡可可",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Coco004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "你向我发脾气也没用……\n我只是一只可爱的猫头鹰……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden009.ogg"
+    },
+    {
+      "type": "text",
+      "text": "从这个春季开始，\n请大家以囚犯的身份，在这里生活下去。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden010.ogg"
+    },
+    {
+      "type": "text",
+      "text": "得救的方法倒也不是没有……\n只要能找到【大魔女】，就能将各位的诅咒……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden011.ogg"
+    },
+    {
+      "type": "text",
+      "text": "啊，不过，让你们抱有期待也不太好……\n请把这事忘了吧。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden012.ogg"
+    },
+    {
+      "type": "text",
+      "text": "这里有浴室还有娱乐室，各类设施一应俱全，\n要不要考虑考虑……在这里快乐度过余生呢？",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden013.ogg"
+    },
+    {
+      "type": "text",
+      "text": "（囚犯……？）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema016.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛的思考似乎没跟上现实情况的发展速度。\n为了压抑住激烈的心跳，她用手按住了胸口。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Stills",
+        "props": {
+          "posX": 55,
+          "posY": 30
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.9
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.6
+      }
+    },
+    {
+      "type": "text",
+      "text": "啊，顺带一提，看守就是过去收监在此的人\n成为了魔女后的样子。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden014.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我们称之为【残骸】。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden015.ogg"
+    },
+    {
+      "type": "text",
+      "text": "多数成为魔女的人都会被处刑，\n但我们会挑出其中比较容易使唤的，对它进行心灵操控。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden016.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我们已经命令它们，只要谁敢反抗就杀谁……\n真是不好意思，反抗的话就请你去死吧。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden017.ogg"
+    },
+    {
+      "type": "text",
+      "text": "少女们的视线集中在\n把守着出入口的黑衣怪物。"
+    },
+    {
+      "type": "text",
+      "text": "那怪物曾是人类。\n成为魔女之后，就化作如此“残骸”。"
+    },
+    {
+      "type": "text",
+      "text": "少女们的表情，\n述说着她们内心的难以置信。"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "Stills"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "posX": 52,
+        "posY": 50,
+        "scale": 1.5,
+        "rotZ": 0,
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "MainBackground",
+        "props": {
+          "posX": 48
+        },
+        "easing": "Linear",
+        "duration": 3
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": null
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 30,
+        "posY": 60,
+        "scale": 2,
+        "rotZ": 0,
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Hiro",
+        "subId": "Middle",
+        "scale": 1.5,
+        "posX": 50,
+        "posY": 27,
+        "appearance": [
+          "Normal1"
+        ]
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "MainBackground-Middle",
+        "props": {
+          "posY": 56
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Hiro-Middle",
+        "props": {
+          "posY": 32
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "text",
+      "text": "在苦闷的沉默之中，\n最初往前踏出一步的，是二阶堂希罗。"
+    },
+    {
+      "type": "text",
+      "text": "面容清秀的少女，用清冽的声音说道。"
+    },
+    {
+      "type": "text",
+      "text": "你搞错了。\n我不是邪恶。",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro002.ogg"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_25_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗似乎抱持有绝对的自信，\n声音中没有一丝迷惘。紧接着——"
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Hiro",
+        "subId": "Middle",
+        "scale": 1,
+        "posX": 50,
+        "appearance": [
+          "Angry1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "给这个国家带来灾难的危险因子，\n是她才对。",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "唰——她伸出手指着艾玛。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1"
+        ],
+        "position": 40
+      }
+    },
+    {
+      "type": "text",
+      "text": "……",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema017.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1"
+        ],
+        "position": 40
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Meruru",
+        "appearance": [
+          "Default"
+        ],
+        "position": 60
+      }
+    },
+    {
+      "type": "text",
+      "text": "梅露露靠在艾玛身旁，手掌轻轻扶住她的手臂。\n虽然没有直视着她，但梅露露的担心应该是发自真心的。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛小姐……",
+      "speaker": "冰上梅露露",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Meruru006.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Normal1"
+        ],
+        "position": 40
+      }
+    },
+    {
+      "type": "text",
+      "text": "面对梅露露的暖心举动，艾玛露出了微笑。"
+    },
+    {
+      "type": "text",
+      "text": "欸嘿嘿，没事的啦。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema018.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Warden",
+        "appearance": [
+          "1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "对于希罗的指控，\n典狱长叹了口气，打心底里觉得麻烦。"
+    },
+    {
+      "type": "text",
+      "text": "唉～～……我说，求你们了。请接受你们是恶人的事实。\n我很不想加班啦，\n希望大家能和和气气开开心心地相处下去……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden018.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png",
+        "subId": "Middle",
+        "posX": 30,
+        "posY": 60,
+        "scale": 2,
+        "rotZ": 0,
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "charMiddle",
+      "params": {
+        "id": "Hiro",
+        "subId": "Middle",
+        "scale": 1.2,
+        "posX": 50,
+        "posY": 40,
+        "appearance": [
+          "Angry1"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "text": "你错了。我不是邪恶。",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "希罗毫不犹豫地向前走出一步。"
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Hiro-Middle",
+        "props": {
+          "posY": 35
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "能导正这个世界的，只有我。",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Hiro-Middle",
+        "props": {
+          "posY": 30
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "就让我来消灭这个世界的邪恶。\n第一个该消灭的——",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro006.ogg"
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Hiro-Middle",
+        "props": {
+          "posY": 30
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗将倚靠在暖炉旁的\n拨火棍拿到手里。"
+    },
+    {
+      "type": "text",
+      "text": "她那浑浊的双眼紧盯着艾玛。\n艾玛害怕极了，不由得往后退。"
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "MainBackground-Middle",
+        "props": {
+          "posY": 86
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Hiro-Middle",
+        "props": {
+          "posY": 70
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "text",
+      "text": "（不可能，的吧……？\n 再怎么讨厌我，也不至于要杀人吧）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema019.ogg"
+    },
+    {
+      "type": "text",
+      "text": "希罗手持凶器，\n令少女之间的气氛愈发紧张。"
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "MainBackground-Middle",
+        "props": {
+          "posY": 56
+        },
+        "easing": "EaseOutQuad",
+        "duration": 0.6
+      }
+    },
+    {
+      "type": "command",
+      "command": "animate",
+      "params": {
+        "target": "Hiro-Middle",
+        "props": {
+          "posY": 80
+        },
+        "duration": 0.9
+      }
+    },
+    {
+      "type": "text",
+      "text": "就是你！怪物！",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro007.ogg"
+    },
+    {
+      "type": "text",
+      "text": "——哒。希罗凌空一跃。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_009.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "梅露露抱紧了艾玛，摆出要保护她的姿势。\n而艾玛则闭紧了双眼。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_010.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "但凶器没有向艾玛挥下。\n艾玛战战兢兢地睁开双眼，发现——"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "MainBackground-Middle"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_010_001.png",
+        "posX": 50,
+        "posY": 50,
+        "rotZ": 0,
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_12_1_Loop"
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗的杀意，竟挥向了在场的看守。"
+    },
+    {
+      "type": "text",
+      "text": "（啊，我想起来了，希罗她……就是这样的性格）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema020.ogg"
+    },
+    {
+      "type": "text",
+      "text": "在这里，明显是【错误】的事物，\n是魔女的【残骸】——也就是具有怪物外形的看守。"
+    },
+    {
+      "type": "text",
+      "text": "而消除这个世界的【错误】，\n便是二阶堂希罗对自己赋予的使命。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_010.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "邪恶去死！去死去死去死！",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hiro008.ogg"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_010.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_010_002.png"
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗无数次挥动手中的拨火棍。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_010.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "血肉飞溅，\n将她的脸庞染得越来越红。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_010.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "在她无情的攻击下，看守的身体毁坏得失去了原形。\n如果是一般的人类，挨上一下或许便一命呜呼了。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_010.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "而希罗却不带半点犹豫，\n要将看守彻底击溃。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_010_003.png"
+      }
+    },
+    {
+      "type": "text",
+      "text": "在场的所有人只能在旁目睹\n这副惨烈的景象。"
+    },
+    {
+      "type": "text",
+      "text": "尽管手中快速挥舞着沉重的拨火棍，\n她仍能作出敏捷的机动动作。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_010_004.png"
+      }
+    },
+    {
+      "type": "text",
+      "text": "——即便如此。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_009.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "不管受到多少攻击，看守依然不会死去。"
+    },
+    {
+      "type": "text",
+      "text": "下一刻，看守以明显非人的速度和力度，\n瞬间挥下反击的镰刀。"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_012.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/Stills/RGB/Still_010_005.png"
+      }
+    },
+    {
+      "type": "text",
+      "text": "——希罗的头颅，和身体一分为二。"
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "Stills"
+      }
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_013.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗的头颅，\n落在了艾玛的眼前。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "欸……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema021.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_20_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "而留在原地的身体，仍紧握着那把拨火棍。"
+    },
+    {
+      "type": "text",
+      "text": "摇摇晃晃地彷徨了数秒后，\n“咚”地一下倒在地面上。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hanna",
+        "appearance": [
+          "Fearful1",
+          "ArmR4"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "呀啊啊啊——！！",
+      "speaker": "远野汉娜",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Hanna006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "刚刚斩落的头颅睁大着眼睛，\n露出了惊讶的表情。"
+    },
+    {
+      "type": "text",
+      "text": "而向艾玛投去嫌恶眼神的双眼，\n已经失去了光芒。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Fearful1",
+          "ArmR3",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗……？",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema022.ogg"
+    },
+    {
+      "type": "text",
+      "text": "（明明想着还可以重来……还可以再和你当朋友的）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema023.ogg"
+    },
+    {
+      "type": "text",
+      "text": "二阶堂希罗，死了。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛茫然地，颤抖着靠近\n希罗的头颅，伸出了手。"
+    },
+    {
+      "type": "text",
+      "text": "她的手，触碰着沾满鲜血的面庞。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Cry1",
+          "ArmR5",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "这不是真的吧，希罗……？\n不要，不要，不要。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema024.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛的眼中逐渐溢出泪水，\n一颗颗从她脸上滑落。"
+    },
+    {
+      "type": "text",
+      "text": "她发现，在视野的一角，残余遗体的近处，\n有一样闪闪发光的东西。"
+    },
+    {
+      "type": "text",
+      "text": "那似乎是随着希罗身体倒下，\n从她的口袋中掉出来的。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛马上把那件\n伸手可及的物品捡了起来。"
+    },
+    {
+      "type": "text",
+      "text": "（这是……）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema025.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "握在艾玛手中的\n是一支钢笔。"
+    },
+    {
+      "type": "text",
+      "text": "这支钢笔对艾玛来说，也是一件十分重要的物品——"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Cry1",
+          "ArmR3",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "（希罗……我不会再把它弄丢了）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema026.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛将钢笔收进了自己的口袋里。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Warden",
+        "appearance": [
+          "1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "哇～……死掉了呢……\n还得打扫……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden019.ogg"
+    },
+    {
+      "type": "text",
+      "text": "啊，不过，魔女是不会因为这样的事死掉的，\n所以这证明了她不是魔女呢。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden020.ogg"
+    },
+    {
+      "type": "text",
+      "text": "哎呀呀……真是太好了。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden021.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Cry1",
+          "ArmR3",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "（好……？\n 希罗都死了，怎么可能好……！）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema027.ogg"
+    },
+    {
+      "type": "text",
+      "text": "艾玛擦去眼泪，\n紧紧瞪住了典狱长。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Determined2",
+          "ArmR3",
+          "ArmL7"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "但典狱长并不介意她的眼神，\n只是以严肃的语气往下说道。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Warden",
+        "appearance": [
+          "1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "——啊，还有几句话要说，真是不好意思。\n有一件最重要的事情，\n要跟大家说清楚。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden022.ogg"
+    },
+    {
+      "type": "text",
+      "text": "即将转变为魔女的人，\n会产生无法抑制的杀意或妄想。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden023.ogg"
+    },
+    {
+      "type": "text",
+      "text": "这就会带来一桩麻烦事……\n总有一天囚犯内部会发生凶杀案。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden024.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Smile1",
+          "ArmR1",
+          "ArmL1",
+          "Pale-Off",
+          "Sweat-Off",
+          "Cheeks-Normal",
+          "Angle01/Facial/Eyes>Eyes_Sparkle_Open01",
+          "Angle01/Facial/Mouth>Mouth_Normal_Open"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "凶杀案！？",
+      "speaker": "橘雪莉",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Sherry010.ogg"
+    },
+    {
+      "type": "text",
+      "text": "听到这番话后，雪莉的眼睛闪着\n不合时宜的亮光。"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Warden",
+        "appearance": [
+          "1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "是啊……每次都会有这种事……\n再怎么说也不可能和危险人物共同生活，对不对。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden025.ogg"
+    },
+    {
+      "type": "text",
+      "text": "所以呢，只要发生了凶杀案，\n我们就会举行【魔女审判】。",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden026.ogg"
+    },
+    {
+      "type": "text",
+      "text": "成为【魔女】的囚犯呢……嗯……\n……我们会对其处以死刑……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden027.ogg"
+    },
+    {
+      "type": "text",
+      "text": "详细情况麻烦去看【魔女图鉴】。\n我就失陪啦……",
+      "speaker": "典狱长",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Warden028.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_008.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "典狱长拍动翅膀，\n从通风口处离开了。"
+    },
+    {
+      "type": "text",
+      "text": "艾玛低头望着自己的双手。\n双手已被希罗的血染成一片深红。"
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "action": "stop"
+      }
+    },
+    {
+      "type": "text",
+      "text": "——做得好。"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_005_001.png"
+      }
+    },
+    {
+      "type": "text",
+      "text": "听到这道声音，艾玛吓了一跳。\n她马上看了看四周。"
+    },
+    {
+      "type": "text",
+      "text": "当然，她的身边根本没有其他人。"
+    },
+    {
+      "type": "text",
+      "text": "（是啊，怎么可能，会有其他人……）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv04/0101Adv04_Ema028.ogg"
+    },
+    {
+      "type": "text",
+      "text": "就这样，艾玛等人的狱中生活开始了。"
+    },
+    {
+      "type": "text",
+      "text": "一道仿佛脚下正无声崩塌般的不祥预感\n萦绕在所有少女的心头上。"
+    },
+    {
+      "type": "command",
+      "command": "goto",
+      "params": {
+        "scene": "Act01_Chapter01/Act01_Chapter01_Adv05",
+        "soft": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "id": "Act01_Chapter01_Adv05",
+  "type": "traditional",
+  "lines": [
+    {
+      "type": "label",
+      "name": "Scene1-0-3"
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_001_001.png",
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 1.2
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.8
+      }
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_119.ogg"
+      }
+    },
+    {
+      "type": "text",
+      "text": "刚才艾玛抓着铁栅栏时还紧锁着的门，\n如今轻轻一推就打开了。"
+    },
+    {
+      "type": "command",
+      "command": "resetText",
+      "params": {}
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "SolidColor",
+        "subId": "Overlay",
+        "tint": "#000000",
+        "duration": 0.9
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 1.5
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": "/Background/MainBackground/RGB/Background_002_001.png",
+        "posX": 50,
+        "posY": 50,
+        "rotZ": 0,
+        "duration": 0
+      }
+    },
+    {
+      "type": "command",
+      "command": "bg",
+      "params": {
+        "path": null,
+        "subId": "Overlay",
+        "duration": 0.9
+      }
+    },
+    {
+      "type": "command",
+      "command": "wait",
+      "params": {
+        "time": 0.9
+      }
+    },
+    {
+      "type": "command",
+      "command": "bgm",
+      "params": {
+        "path": "Bgm_21_1"
+      }
+    },
+    {
+      "type": "text",
+      "text": "艾玛马上跟在希罗身后，来到过道上。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR3"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "等、等我一下，希罗！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "过道上又出现了\n许多名少女。"
+    },
+    {
+      "type": "text",
+      "text": "少女们的视线都集中在了艾玛身上。\n除了希罗，艾玛并未见过这些少女。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Normal1",
+          "ArmR3"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "（太好了……我还在想，\n 要是全部人都是初中的同学，我该怎么办呢……）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "但，所有人的年纪看起来都和自己差不多。\n跟艾玛和希罗一样，她们都身穿奇妙的衣裳。"
+    },
+    {
+      "type": "text",
+      "text": "而过道前方，一个黑衣异形正在走动着。"
+    },
+    {
+      "type": "text",
+      "text": "（那个异形就是所谓的看守吧）",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "其他少女也吓得脸色煞白，不知所措，\n只好跟随看守开始移动。"
+    },
+    {
+      "type": "text",
+      "text": "希罗远远走在了艾玛前边。\n艾玛小跑着追赶着她。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "希罗！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema004.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Pensive1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Normal1",
+          "ArmR3"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "……",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Hiro001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "听、听我说。虽然发生了这样那样的事，\n不过还能见到希罗你，真是太好了。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema005.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我已经下决心改变了，\n已经不是过去的我了。\n我想和你做朋友。",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema006.ogg"
+    },
+    {
+      "type": "text",
+      "text": "……",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Hiro002.ogg"
+    },
+    {
+      "type": "text",
+      "text": "希罗似乎决意要无视艾玛，\n没有放慢脚步。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR3"
+        ],
+        "position": 70
+      }
+    },
+    {
+      "type": "text",
+      "text": "我，我不会放弃的！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema007.ogg"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 30
+      }
+    },
+    {
+      "type": "text",
+      "text": "……",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Hiro003.ogg"
+    },
+    {
+      "type": "text",
+      "text": "希罗发出咬牙切齿的声音，\n转过身来面向艾玛。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 40
+      }
+    },
+    {
+      "type": "text",
+      "text": "然后，毫不犹豫的推了艾玛一下。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR3"
+        ],
+        "position": 80
+      }
+    },
+    {
+      "type": "text",
+      "text": "呀！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema008.ogg"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_006 Fall down.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "hide",
+      "params": {
+        "id": "Ema"
+      }
+    },
+    {
+      "type": "text",
+      "text": "艾玛当即摔倒在地，\n膝盖擦在坚硬的石地板上。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Hiro",
+        "appearance": [
+          "Angry1"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "而动手伤人的希罗\n正恶狠狠地俯视着艾玛。"
+    },
+    {
+      "type": "text",
+      "text": "你改变了，\n跟我有什么关系？",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Hiro004.ogg"
+    },
+    {
+      "type": "text",
+      "text": "我讨厌你的事实不会改变。\n永远不会。",
+      "speaker": "二阶堂希罗",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Hiro005.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "text",
+      "text": "希罗凶巴巴地说道，\n然后转身离去。"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Ema",
+        "appearance": [
+          "Surprised1",
+          "ArmR3"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "等、等下……！",
+      "speaker": "樱羽艾玛",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Ema009.ogg"
+    },
+    {
+      "type": "command",
+      "command": "hideChars"
+    },
+    {
+      "type": "command",
+      "command": "char",
+      "params": {
+        "id": "Sherry",
+        "appearance": [
+          "Pensive1",
+          "ArmL4",
+          "ArmR2"
+        ],
+        "position": 50
+      }
+    },
+    {
+      "type": "text",
+      "text": "唔……",
+      "speaker": "???",
+      "voice": "/Audio/Voice/Act01_Chapter01/Act01_Chapter01_Adv05/0101Adv05_Unknown001.ogg"
+    },
+    {
+      "type": "text",
+      "text": "一位水蓝色头发的少女，正兴致勃勃的观察着二人。"
+    },
+    {
+      "type": "command",
+      "command": "sfx",
+      "params": {
+        "path": "/Audio/SFX/Scenario/Sfx_Scenario_007.ogg"
+      }
+    },
+    {
+      "type": "command",
+      "command": "goto",
+      "params": {
+        "scene": "Act01_Chapter01/Act01_Chapter01_Adv04",
+        "soft": true
+      }
+    }
+  ]
+}
